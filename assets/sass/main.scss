@@ -1,0 +1,293 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+// breakpoints
+$bp1: 1200px;
+$bp2: 600px;
+$bp3: 450px;
+// margenes
+$gutterwidth: 6px;
+// colores
+$color-base: rgba(100,100,100,.2);
+$color-base-darken: darken($color-base, 20%);
+$white: opacify($color-base,.3);
+// globals
+$basefontsize: 16;
+// paths
+$image-path: '../img/' !default;
+
+/*------------------------------------*\
+    MIXINS
+\*------------------------------------*/
+@mixin font-size($font-size: 16){
+    font-size:($font-size)*1px; // fallback + progressive enhancement
+    font-size:($font-size / $basefontsize)*1rem;
+}
+
+@mixin max-width($max-width : $pagemaxwidth)  {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: $max-width;
+  width:100%;
+}
+
+
+/*------------------------------------*\
+    PLACEHOLDERS
+\*------------------------------------*/
+%basepadding {
+  padding: $gutterwidth $gutterwidth + 4;
+}
+%imgbgsize {
+  background-size: contain;
+}
+
+/*------------------------------------*\
+    GLOBAL
+\*------------------------------------*/
+html {
+  font-size: 75%; //de 16px
+  @media all and (min-width: $bp3) {
+    font-size: 100%; //de 16px
+  }
+}
+body {
+    background-color: $color-base;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+h1 { font-size: 10vw; }
+a { text-decoration: none; }
+small, figcaption { font-size: .9rem;}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+.maxwidth__bp1 {
+  @include max-width($bp1);
+}
+
+.img__bg {
+  background-image: url('#{$image-path}logoyo.png');
+  background-color: $color-base;
+  background-repeat: no-repeat;
+  @extend %imgbgsize;
+}
+
+/*------------------------------------*\
+    COMPONENTES
+\*------------------------------------*/
+
+//Bloque de contenido
+@media all and (min-width: $bp3) {
+  .block__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: $color-base;
+  }
+}
+
+.block__item {
+  list-style: none;
+  @extend %basepadding;   
+  margin-bottom: $gutterwidth + 5;
+  background-color: $color-base;
+  @include font-size(18);
+
+  //magia!!
+  @media all and (min-width: $bp3) {
+    width: calc(25% - #{$gutterwidth});
+    background: red;
+  }
+  @media all and (min-width: $bp2) {
+    width: calc(33.33% - #{$gutterwidth});
+    background-color: blue;
+  }
+  @media all and (min-width: $bp1) {
+    width: calc(25% - #{$gutterwidth});
+  }
+
+}
+
+// Componente galeria
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery__item {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+    //magia!!
+    @media (min-width: $bp3) {
+      width: calc(20% - #{$gutterwidth});
+    }
+  text-align: center;
+  
+	.gallery__caption {
+    transition: all .2s;
+    font-size: 12px; // fallback + progressive enhancement
+    font-size: 1rem;
+
+	    &::after {
+			width: 2em;
+			height: 2em;
+      transition: all .7s;
+      content: "+" !important;
+      position: absolute;        
+      transform: translate(-40px, -70px);
+      font-size: 12px; 
+      font-size: 2rem;
+			background-color: $white;
+			line-height: 2em;
+      text-align: center;
+      border-radius: 100%;
+		}
+		
+		&:hover::after {
+			content: ">" !important;
+       transform: translate(-15px, -20px);
+			background-color: $color-base;
+		}
+	}
+}
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+.header {
+  //max-width: $bp1;
+  width: 100%;
+  background-color: white;
+}
+
+/*------------------------------------*\
+    NAVEGACION
+\*------------------------------------*/
+
+.main__nav {
+  //display: flex;
+  //justify-content: space-between;
+    * {
+      transition: all .2s ease-in;
+    }
+
+    a {
+      padding: $gutterwidth;
+      color: white;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-base;
+      }
+    }
+
+  label {
+    &:hover:after {
+        background-color: red;
+    }
+  }
+  label::after {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    content: "☰";
+    font-size: 150%;
+    padding: 5px;
+    text-align: center;
+    z-index: 3;
+    @media all and (min-width: $bp3) {
+      top: 40px;
+    }
+  }
+
+  > ul { //el overlay
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    transform: translate(100%,0); //vete fuera del escenario
+    background-color: red;
+    text-align: center;
+    font-size: 60%;
+    
+    @media all and (min-width: $bp3) {
+      transform: translate(150%,0); //vete aun mas lejos
+      font-size: inherit;
+    }
+
+    > li { //1st level
+      border-bottom: dashed 2px $color-base;
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      a {
+        display: block;
+        height: 25vh;
+        line-height: 10;
+        @extend %basepadding;
+        flex-direction: column;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    //height: auto;
+    transform: translate(0,0);
+    transition: all .2s ease-in;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    
+  }
+  input[type="checkbox"]:checked + label::after {
+    content:"X";
+  }
+}
+
+.nav__uno {
+  width: 100%;
+}
+  .nav__uno__item {
+      display: inline-block;
+      width: 25%;
+      line-height: 3;
+      text-align: center;
+      background-color: red;
+      border-right: 1px solid white;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+.nav__dos {
+  display: table;
+  width: 100%;
+} 
+  .nav__dos__item {
+    display: table-cell;
+  }
+
+
+
+
