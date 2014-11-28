@@ -2,19 +2,22 @@ Style guide ToT
 ==============================
 
 A starting point for crafting living style guides. Scalable and Modular Architecture for CSS.
-`*Note: Work in progress...*`
+
+` *Note: Work in progress...* `
 
 ![Screenshot](https://s3-us-west-2.amazonaws.com/s.cdpn.io/98095/logoyo.png)
 
-## Made with Codekit & Sass
+### Html
 
-	<!-- @include someFile.kit -->
+It is a sort of .kit includes that compiles into an index.html. Uses Codekit task manager.
 
+	<body>
+		<!-- @include component.kit -->
+	</body>
 
-### Hook up your own CSS into the style guide
+### Sass
 
-
-## Browser Support
+### Browser Support
 I've built **Style guide ToT** with progressive enhancement in mind to work on a wide range of browsers.
 
 Known supported browsers include:
@@ -41,6 +44,6 @@ If you come across any bugs, or have any other issues with the boilerplate, plea
 [pattern lab](http://patternlab.io/)
 
 ## By
-Sergio Forés - Web Designer/Layout focused on Wordpress 
+Sergio Forés - Web Designer/Layout focused on Wordpress > 
 [Github](https://github.com/t0t/).
 [Linkedin](https://www.linkedin.com/in/sergiofores/).
