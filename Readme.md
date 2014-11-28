@@ -38,7 +38,7 @@ If you come across any bugs, or have any other issues with the boilerplate, plea
 * [pattern lab](http://patternlab.io/)
 * [BEM. Block, Element, Modifier](https://bem.info/method/)
 
-## By
+;)
 Sergio Forés - Web Designer/Layout focused on Wordpress > 
 [Github](https://github.com/t0t/).
 [Linkedin](https://www.linkedin.com/in/sergiofores/).
