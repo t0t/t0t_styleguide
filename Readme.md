@@ -2,16 +2,14 @@ Style guide ToT
 ==============================
 
 A starting point for crafting living style guides. Scalable and Modular Architecture for CSS.
-
-*Note: Work in progress...*
+`*Note: Work in progress...*`
 
 ![Screenshot](https://s3-us-west-2.amazonaws.com/s.cdpn.io/98095/logoyo.png)
 
-## How its made
+## Made with Codekit & Sass
 
 	<!-- @include someFile.kit -->
 
-`<head>`
 
 ### Hook up your own CSS into the style guide
 
@@ -42,5 +40,7 @@ If you come across any bugs, or have any other issues with the boilerplate, plea
 [STYLE GUIDE BOILERPLATE](http://brettjankord.com/projects/style-guide-boilerplate/)
 [pattern lab](http://patternlab.io/)
 
-## Credit
-Sergio Forés [t0t](https://github.com/t0t/).
+## By
+Sergio Forés - Web Designer/Layout focused on Wordpress 
+[Github](https://github.com/t0t/).
+[Linkedin](https://www.linkedin.com/in/sergiofores/).
