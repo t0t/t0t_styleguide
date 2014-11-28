@@ -7,18 +7,14 @@ A starting point for crafting living style guides. Scalable and Modular Architec
 
 ![Screenshot](https://s3-us-west-2.amazonaws.com/s.cdpn.io/98095/logoyo.png)
 
-## Getting Started With Style Guide Boilerplate
+## How its made
+
+	<!-- @include someFile.kit -->
+
+`<head>`
 
 ### Hook up your own CSS into the style guide
-In the `<head>` of **Style Guide Boilerplate** are custom styles for the boilerplate itself. These have all been prefixed with sg- so they hopefully shouldn't cause any conflicts with your website's own styles.
 
-Below the custom styles for the boilerplate, you will add in your own custom stylesheet(s) which you use on your live site.
-
-    <!-- Style Guide Boilerplate Styles -->
-    <link rel="stylesheet" href="css/sg-style.css">
-	  
-    <!-- Replace below stylesheet with your own stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
 
 ## Browser Support
 I've built **Style guide ToT** with progressive enhancement in mind to work on a wide range of browsers.
@@ -40,13 +36,11 @@ Known supported browsers include:
 
 If you come across any bugs, or have any other issues with the boilerplate, please open an issue here on GitHub.
 
-
 ## Thanks to
-
 [Wakkos-CSS-Framework](https://github.com/Wakkos/Wakkos-CSS-Framework/)
 [SMACSS](http://smacss.com/)
-
+[STYLE GUIDE BOILERPLATE](http://brettjankord.com/projects/style-guide-boilerplate/)
+[pattern lab](http://patternlab.io/)
 
 ## Credit
-
 Sergio Forés [t0t](https://github.com/t0t/).
