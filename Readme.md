@@ -17,20 +17,6 @@ It is a sort of .kit (Codekit) includes that compiles into an index.html.
 ### Sass
 * BEM Methodology (Block, Element, Modifier)
 
-
-### Browser Support
-I've built **Style guide ToT** with progressive enhancement in mind to work on a wide range of browsers.
-
-Known supported browsers include:
-
-* Chrome
-* Firefox
-* Safari 
-* Opera 
-* IE6+
-
-If you come across any bugs, or have any other issues with the boilerplate, please open an issue here on GitHub.
-
 ## Thanks to
 * [Wakkos-CSS-Framework](https://github.com/Wakkos/Wakkos-CSS-Framework/)
 * [SMACSS](http://smacss.com/)
