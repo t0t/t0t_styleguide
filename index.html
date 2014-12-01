@@ -4,30 +4,32 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="assets/css/style.css">
-</head>	<body>
+</head>	<body class="body">
 	<header class="header">
-    <h1>Así es un h1</h1>
-        <h2>Así es un h2</h2></header>	<main>
-	<h2>Así es un h2</h2>	<section>
-  <h2>Colores</h2>
-  <div class="square color-base"></div>
-  <div class="square color-base-dark"></div>
-  <div class="square color-base-light"></div>
-  <div class="square color-base-invert"></div>
+    <h1 class="h1">T0T Style Guide</h1>
+        <h2 class="h2"></h2></header>	<main class="main">
+	<h3 class="h3"></h3>	<h2>Colores</h2>
+<section class="section section__color">
+  <div class="section__color--item color-base"></div>
+  <div class="section__color--item color-base-dark"></div>
+  <div class="section__color--item color-base-light"></div>
+  <div class="section__color--item color-base-invert"></div>
 </section>
 
+<h2>Grid</h2>
 <section class="block__wrap maxwidth__bp1">
-  <h2>Grid básico</h2>
-    <div class="block__item">Lorem</div>
-    <div class="block__item img__bg">.img__bg</div>
-    <div class="block__item"><figure class="gallery__item">
-	<a href="#">
-	  <img src="assets/img/logoyo.png" alt="" />	  <figcaption class="gallery__caption">
-	Caption
-</figcaption>	</a>
-</figure></div>
+    <div class="block__item"></div>
+    <div class="block__item img__bg"></div>
+    <div class="block__item"></div>
+    <div class="block__item"></div>
+    <div class="block__item"></div>
+    <div class="block__item"></div>
+    <div class="block__item"></div>
+</section>
 
-    <div class="gallery">
+<h2>Photo Gallery</h2>
+<section class="section">
+  <div class="gallery">
   <figure class="gallery__item">
 	<a href="#">
 	  <img src="assets/img/logoyo.png" alt="" />	  <figcaption class="gallery__caption">
@@ -63,34 +65,39 @@
 	  <img src="assets/img/logoyo.png" alt="" />	  <figcaption class="gallery__caption">
 	Caption
 </figcaption>	</a>
-</figure></div>
-    <div class="block__item">
-     Lorem ipsum dolor sit amet, consectetur  iste doloribus ipsa, quae. Modi!
-   </div>
-    <div class="block__item">Lorem ipsum dolor sit </div>
-    <div class="block__item">Lorem ipsum dolor sit amet, consectetur adipisicin</div>
-    <div class="block__item">Lorem ipsum dolor sit amet, consectetur adipisicis earum ratione quis perferendis.</div>
-</section></main>	<nav class="main__nav" role="navigation">
+</figure></div></section>
+
+<h2>Figure</h2>
+<section class="section">
+  <figure class="gallery__item">
+	<a href="#">
+	  <img src="assets/img/logoyo.png" alt="" />	  <figcaption class="gallery__caption">
+	Caption
+</figcaption>	</a>
+</figure></section></main>	<nav class="main__nav" role="navigation">
   <input type="checkbox" id="trigger"/>
   <label for="trigger"></label>
    <ul>
-     <li class="main__nav--item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-     <li class="main__nav--item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-     <li class="main__nav--item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-     <li class="main__nav--item"><a href="" target="" title="" accesskey="">Opcion</a></li>
+     <li class="main__nav--item"><a href="" target="" title="" accesskey=""></a></li>
+     <li class="main__nav--item"><a href="" target="" title="" accesskey=""></a></li>
+     <li class="main__nav--item"><a href="" target="" title="" accesskey=""></a></li>
+     <li class="main__nav--item"><a href="" target="" title="" accesskey=""></a></li>
    </ul>
 </nav>
 
+<h2>Menu con display: inline-block</h2>
 <nav class="nav nav__uno">
-    <h3>Así es un h3</h3>    <li class="nav__uno__item"><a href="" target="" title="" accesskey="">Opcion</a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey="">Opcion</a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey="">Opcion</a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey="">Opcion</a></li>
+    <h3 class="h3"></h3>    <li class="nav__uno__item"><a href="" target="" title="" accesskey=""></a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey=""></a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey=""></a></li><li class="nav__uno__item"><a href="" target="" title="" accesskey=""></a></li>
 </nav>
 
-<h3>Así es un h3</h3>  <nav class="nav nav__dos">
-      <li class="nav__dos__item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-      <li class="nav__dos__item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-      <li class="nav__dos__item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-      <li class="nav__dos__item"><a href="" target="" title="" accesskey="">Opcion</a></li>
-  </nav>	<footer>
-		<a href="http://sergiofores.net" target="_blank">Enlace externo con pseudo elemento </a>
-		<a href="http://sergiofores.net">Enlace externo con pseudo elemento </a>
+<h2>Menu con display: table</h2>
+  <nav class="nav nav__dos">
+      <li class="nav__dos__item"><a href="" target="" title="" accesskey=""></a></li>
+      <li class="nav__dos__item"><a href="" target="" title="" accesskey=""></a></li>
+      <li class="nav__dos__item"><a href="" target="" title="" accesskey=""></a></li>
+      <li class="nav__dos__item"><a href="" target="" title="" accesskey=""></a></li>
+  </nav>	<h2>Enlaces externos</h2>
+<footer class="footer">
+	<a class="btn" href="http://sergiofores.net" target="_blank"></a>
+	<a class="btn" href="http://sergiofores.net"></a>
 </footer></body></html>

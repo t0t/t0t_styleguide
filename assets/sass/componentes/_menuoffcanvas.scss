@@ -1,47 +1,84 @@
 // menu off canvas
-/*
-* http://codepen.io/ncerminara/pen/quJpi
-*/
-#site-wrapper {
-  position: relative;
-  overflow: hidden;
+.main__nav {
+  position: fixed;
   width: 100%;
-}
-#site-canvas {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  @include translateX(0); //fallback
-  @include translate3d(0,0,0); //improve performance
-  @include transition(200ms);
-  @include vendor( backface-visibility, hidden ); //http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms
-}
-
-.show-nav #site-canvas {
-  @include translateX(-200px); //fallback
-  @include translate3d(-200px,0,0);//improve performance
-}
-
-#site-menu {
-  width: 200px;
-  height: 100%;
-  position: absolute;
   top: 0;
-  right: -200px;
-  background: $color-base;
-  padding: $paddingbase;
-  li {
-  	// @extend %text-center;
-  	list-style: none;
-  }
-}
+  
+    * {
+      transition: all .2s ease-in;
+    }
 
-.toggle-nav {
-	position: absolute;
-	right: 10%;
-	top: $paddingbase;
-	// background: $color-base-invert;
-	@media (max-width: $bp3) {
-		right: 6%;
-	}
+    a {
+      padding: $gutterwidth;
+      color: white;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-base;
+      }
+    }
+
+  label {
+    &:hover:after {
+        background-color: red;
+    }
+  }
+  label::after {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    z-index:5;
+    content: "☰";
+    font-size: 150%;
+    padding: 5px;
+    text-align: center;
+    @media all and (min-width: $bp3) {
+      top: 40px;
+    }
+  }
+
+  > ul { //el overlay
+    transform: translate(100%,0); //vete fuera del escenario
+    width: 100%;
+    background-color: red;
+    text-align: center;
+    font-size: 60%;
+    
+    @media all and (min-width: $bp3) {
+      transform: translate(150%,0); //vete aun mas lejos
+      font-size: inherit;
+    }
+
+    > li { //1st level
+      border-bottom: dashed 2px $color-base;
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      a {
+        display: block;
+        height: 25vh;
+        line-height: 8;
+        @extend %basepadding;
+        text-decoration: none;
+        flex-direction: column;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    //height: auto;
+    transform: translate(0,0);
+    transition: all .2s ease-in;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + label::after {
+    content:"X";
+  }
+  
 }

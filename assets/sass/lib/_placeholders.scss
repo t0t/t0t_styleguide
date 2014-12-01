@@ -7,6 +7,12 @@
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
+%basepadding {
+  padding: $gutterwidth $gutterwidth + 4;
+}
+%imgbgsize {
+  background-size: contain;
+}
 %no-padding {
   padding: 0;
 }
@@ -16,6 +22,10 @@
 %padding-horizontal {
   padding-left: $paddingbase;
   padding-right: $paddingbase;
+}
+%margin-vertical {
+  margin-top: $paddingbase;
+  margin-bottom: $paddingbase;
 }
 %display-block {
   display: block;
@@ -38,7 +48,6 @@
 }
 %inline-block {
   display: inline-block;
-  margin-bottom: $paddingbase / -2; //fix para el inline-block
 }
 %list-inline {
   display: inline-block;
@@ -54,17 +63,8 @@
 	text-overflow : ellipsis;
 	white-space : nowrap;
 }
-  /**
-  * The ghost, nudged to maintain perfect centering
-  */
-%vcenter {
-	&:before {
-		content: '';
-		display: inline-block;
-		height: 100%;
-		vertical-align: middle;
-	}
-}
+
+
 /**
 * Escondemos el texto solo VISUALMENTE
 */

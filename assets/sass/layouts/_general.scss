@@ -6,13 +6,18 @@ html {
 }
 
 body {
-	padding-top: $baselineheight*2.4;
-    font-size: 1rem;
 	font-family: $basefont;
-	line-height: $baselineheight;
 	color: $textcolor;
 	// @include background-image(bg,cover,jpg);
-	background-color: $color-base;
+}
+img {
+  @extend %full-width;
+  width: 100%;
+}
+h1 {font-size: 10vw;}
+
+.section {
+	@extend %margin-vertical;
 }
 
 // Layers
@@ -21,12 +26,11 @@ input[type="checkbox"]:checked + label::after { z-index:5}
 
 // Mascaras
 img {
-		clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
-	}
+	clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+}
 
 // WPCF7
 .wpcf7 {
-	// background-color: #d3d3d3;
 	display: table-cell;	
 	width: 75%;
 	@media screen and (max-width: $bp3) {

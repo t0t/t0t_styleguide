@@ -1,18 +1,4 @@
 // Footer
-.content-info {
-	@include max-width ($bp1);
-	@extend %text-center;
-	.home & {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
-			small {
-				color: $white;
-			}
-	}
-
-}
 
 address, p, form {
 	margin-bottom: 0;
