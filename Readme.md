@@ -1,7 +1,7 @@
 Style guide ToT
 ==============================
 
-A starting point for crafting living style guides. Scalable and Modular Architecture for CSS.
+A starting point for crafting living style guides. Scalable and Modular Architecture for CSS. Style guides/Patterns + wireframings = website.
 
 ` Work in progress... `
 

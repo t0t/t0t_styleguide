@@ -87,6 +87,14 @@ img {
   background-repeat: no-repeat;
   @extend %imgbgsize;
 }
+//Data atributes
+a[href^="http://"]::after { // ^ empieza por...
+  content: " (enlace externo)";    
+}
+a[target="_blank"]::after {
+  content: " \2714";
+  color: $white;
+}
 
 /*------------------------------------*\
     COMPONENTES
@@ -191,7 +199,7 @@ img {
 
     a {
       padding: $gutterwidth;
-      color: white;
+      color: $white;
       text-transform: uppercase;
 
       &:hover {
