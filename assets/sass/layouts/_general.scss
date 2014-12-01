@@ -1,0 +1,53 @@
+html {
+  font-size: 75%; //de 16px
+  @media all and (min-width: $bp3) {
+    font-size: 100%; //de 16px
+  }
+}
+
+body {
+	padding-top: $baselineheight*2.4;
+    font-size: 1rem;
+	font-family: $basefont;
+	line-height: $baselineheight;
+	color: $textcolor;
+	// @include background-image(bg,cover,jpg);
+	background-color: $color-base;
+}
+
+// Layers
+input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {z-index: -1}
+input[type="checkbox"]:checked + label::after { z-index:5}
+
+// Mascaras
+img {
+		clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	}
+
+// WPCF7
+.wpcf7 {
+	// background-color: #d3d3d3;
+	display: table-cell;	
+	width: 75%;
+	@media screen and (max-width: $bp3) {
+		display: table-row;
+	}
+}
+// Mappress
+.mapp-iw {
+	color: $black;
+}
+// Vegas
+.nav-arrows {
+	@media all and (max-width: $bp3) {
+		display: none;
+	}
+}
+//oculta sello en contacto
+.page-template-template-contacto-php .sello { display: none; }
+
+// Animaciones
+@include keyframe(load-in-slow) {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

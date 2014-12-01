@@ -1,0 +1,105 @@
+
+// Por fin creo que lo tengo!, gracias a Maze
+
+/* ==========================================================================
+
+// Grid File
+// Grid set up using the Maze Framework www.get-maze.co.uk.
+
+
+/* MIXIN
+========================================================================== */
+
+@mixin grid($col, $fold:"left", $push:$push, $margin:$gutter) {
+        @include transition(.3s);
+        float:#{$fold};
+        // background: $color-base;
+        // cursor: pointer;
+        // border: $borde;
+        padding: $paddingbase;
+        width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
+       
+        @if $push > 1 {
+                margin-left: (($unit * $push) ) + ( $gutter / ( $grid-columns / $push) );
+        }
+       
+        @if $fold == left {
+                margin-right: $margin;
+                
+                &:last-child {
+                    margin-right: 0;
+                }
+        }
+       
+        @if $fold == right {
+                margin-left: $margin;
+
+                &:last-child {
+                    margin-left: 0;
+                }
+        }
+      
+        &:hover {
+            // background: $lightergrey;
+            // color: $black;
+        }
+}
+
+
+
+// ohh la la grid coooool!!!
+// http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin galeria($numPerRow) {
+  width: ((100% - (($numPerRow - 1) * $gutterwidth)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $gutterwidth;
+    margin-right: $gutterwidth;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  float: left;
+  // border: 1px solid black;
+}
+
+
+@mixin max-width($max-width : $pagemaxwitdh)  {
+  margin-left:auto;
+  margin-right:auto;
+  max-width: $max-width;
+  width:100%;
+}
+
+// .box-sizing(VALUE); (border-box, padding-box, content-box)
+@mixin box-sizing($boxsize: border-box) {
+  -webkit-box-sizing : $boxsize;
+  -moz-box-sizing : $boxsize;
+  -ms-box-sizing : $boxsize;
+  box-sizing : $boxsize;
+}
+
+// tamaños cajitas
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+//ohh la la grid coooool!!!
+// http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin rejilla($numPerRow) {
+  width: ((100% - (($numPerRow - 1) * $gutterwidth)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $gutterwidth;
+    margin-right: $gutterwidth;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  float: left;
+  // border: 1px solid black;
+}

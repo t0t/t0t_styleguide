@@ -1,0 +1,334 @@
+
+
+/*------------------------------------*\
+    GLOBAL
+\*------------------------------------*/
+
+
+main::before { 
+  content: "_main_";
+  @extend %txtinfo; //letreritos indicadores
+}
+
+h1 { font-size: 10vw; }
+  h1::before { 
+    content: "_h1_";
+    @extend %txtinfo; //letreritos indicadores
+  }
+
+a { text-decoration: none; }
+small, figcaption { font-size: .9rem;}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+.maxwidth__bp1 {
+  @include max-width($bp1);
+}
+
+.img__bg {
+  background-image: url('#{$image-path}logoyo.png');
+  background-color: $color-base;
+  background-repeat: no-repeat;
+}
+//Data atributes
+a[href^="http://"]::after { // ^ empieza por...
+  content: " (enlace externo)";    
+}
+a[target="_blank"]::after {
+  content: " \2714";
+  color: $white;
+}
+
+/*------------------------------------*\
+    COMPONENTES
+\*------------------------------------*/
+
+//Bloque de contenido
+@media all and (min-width: $bp3) {
+  .block__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: $color-base;
+  }
+}
+
+.block__item {
+  list-style: none;
+  margin-bottom: $gutterwidth + 5;
+  background-color: $color-base;
+  @include font-size(18);
+
+  //magia!!
+  @media all and (min-width: $bp3) {
+    width: calc(25% - #{$gutterwidth});
+    background: red;
+  }
+  @media all and (min-width: $bp2) {
+    width: calc(33.33% - #{$gutterwidth});
+    background-color: blue;
+  }
+  @media all and (min-width: $bp1) {
+    width: calc(25% - #{$gutterwidth});
+  }
+
+}
+
+// Componente galeria
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.gallery__item {
+  position: relative;
+  width: 50%;
+  z-index: 1;
+    //magia!!
+    @media (min-width: $bp3) {
+      width: calc(20% - #{$gutterwidth});
+    }
+  text-align: center;
+  
+	.gallery__caption {
+    transition: all .2s;
+    font-size: 12px; // fallback + progressive enhancement
+    font-size: 1rem;
+
+	    &::after {
+			width: 2em;
+			height: 2em;
+      transition: all .7s;
+      content: "+" !important;
+      position: absolute;        
+      transform: translate(-40px, -70px);
+      font-size: 12px; 
+      font-size: 2rem;
+			background-color: $white;
+			line-height: 2em;
+      text-align: center;
+      border-radius: 100%;
+		}
+		
+		&:hover::after {
+			content: ">" !important;
+       transform: translate(-15px, -20px);
+			background-color: $color-base;
+		}
+	}
+}
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+.header {
+  //max-width: $bp1;
+  width: 100%;
+  background-color: white;
+}
+
+/*------------------------------------*\
+    NAVEGACION
+\*------------------------------------*/
+
+.main__nav {
+  //display: flex;
+  //justify-content: space-between;
+    * {
+      transition: all .2s ease-in;
+    }
+
+    a {
+      padding: $gutterwidth;
+      color: $white;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $color-base;
+      }
+    }
+
+  label {
+    &:hover:after {
+        background-color: red;
+    }
+  }
+  label::after {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    content: "☰";
+    font-size: 150%;
+    padding: 5px;
+    text-align: center;
+    z-index: 3;
+    @media all and (min-width: $bp3) {
+      top: 40px;
+    }
+  }
+
+  > ul { //el overlay
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    top: 0;
+    transform: translate(100%,0); //vete fuera del escenario
+    background-color: red;
+    text-align: center;
+    font-size: 60%;
+    
+    @media all and (min-width: $bp3) {
+      transform: translate(150%,0); //vete aun mas lejos
+      font-size: inherit;
+    }
+
+    > li { //1st level
+      border-bottom: dashed 2px $color-base;
+      &:last-child {
+        border-bottom: none;
+      }
+      
+      a {
+        display: block;
+        height: 25vh;
+        line-height: 10;
+        flex-direction: column;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    //height: auto;
+    transform: translate(0,0);
+    transition: all .2s ease-in;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+    
+  }
+  input[type="checkbox"]:checked + label::after {
+    content:"X";
+  }
+}
+
+.nav__uno {
+  width: 100%;
+}
+  .nav__uno__item {
+      display: inline-block;
+      width: 25%;
+      line-height: 3;
+      text-align: center;
+      background-color: red;
+      border-right: 1px solid white;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+.nav__dos {
+  display: table;
+  width: 100%;
+} 
+  .nav__dos__item {
+    display: table-cell;
+  }
+
+
+
+
+
+
+	// El otro mixin es para galerias
+	.galeria__item {
+		@include galeria(6);
+		min-height: 185px;
+		@media (max-width: $bp3) {
+			@include galeria(2);
+		}
+	}
+
+// FORMAS
+	.shape-square {
+		@include square(200px);
+	}
+	
+
+// COLORES
+	.color-base {
+		background-color: $color-base;
+		&:before {
+			content: "#{$color-base}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-invert 	{
+		background-color: $color-base-invert;
+		&::before {
+			content: "#{$color-base-invert}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-light 	{ 
+		background-color: $color-base-light;
+		&::before {
+			content: "#{$color-base-light}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-lighter { 
+		background-color: $color-base-lighter;
+		&::before {
+			content: "#{$color-base-lighter}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-lighten { 
+		background-color: $color-base-lighten;
+		&::before {
+			content: "#{$color-base-lighten}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-dark 	{ 
+		background-color: $color-base-dark;	
+		&::before {
+			content: "#{$color-base-dark}";
+			color: white;
+			@extend %display-block;
+		}
+	}
+
+	.color-base-darken { 
+		background-color: $color-base-darken;
+		&::before {
+			content: "#{$color-base-darken}";
+			color: white;
+			@extend %display-block;
+		}
+
+	}
+
+	.color-base-darker { 
+		background-color: $color-base-darker;
+		&::before {
+			content: "#{$color-base-darker}";
+			color: white;
+			@extend %display-block;
+		}
+
+	}

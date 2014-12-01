@@ -1,0 +1,229 @@
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+$bp1 : 1280px;
+$bp2 : 1024px;
+$bp3 : 885px;
+$bp4 : 200px;
+$bp5 : 150px;
+
+$break-wide: $bp1;
+$break-desktop: $bp2;
+$break-tablet: $bp3 + 110px;
+$break-mobile: $bp5;
+
+
+
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+$baselineheight  		:     2em;
+$line-height-computed	:	$baselineheight;
+$baseline :           	$baselineheight;
+$pagemaxwitdh :       	100%;
+$radius :             	5px;
+$hovertransition :    	.3s;
+$animationtime :      	.8s;
+
+// gutter
+$gutterwidth :       	3%;
+// $huecos : 6;
+$margin: $gutterwidth;
+
+// padding
+$paddingbase : 	20px;
+
+$link-vertical-padding:15px;
+$link-horizontal-padding:20px;
+
+// grid
+$grid-columns: 12;
+$unit: (100%  / $grid-columns);
+$gutter: 2% !default;
+$push: 0 !default;
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+// $basefont 					: "Lato", sans-serif;
+$basefont 					: Helvetica, Arial, sans-serif;
+$altfont 					: "Courier New", serif;
+$codefont 					: "Courier New", monospace;
+$googlefont 				: "http://fonts.googleapis.com/css?family=Open+Sans";
+$baseheadingfont 			: $basefont;
+$baseheadingfontweight 		: 900;
+
+$altlineheight : 1.35em;
+// $icons	: icomoon;
+
+
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+$basefontsize 		: 23 !default;
+$baseletterspacing 	: 1px;
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+$color-base      	: rgb(255,76,0);
+$color-base-invert 	: complement($color-base); //invierte
+$color-base-light	: lighten($color-base, 3%);
+$color-base-lighten	: lighten($color-base, 5%);
+$color-base-lighter	: lighten($color-base, 10%);
+$color-base-dark	: darken($color-base, 10%);
+$color-base-darken	: darken($color-base, 40%);
+$color-base-darker	: darken($color-base, 80%);
+
+$color-dos      	: rgb(72,224,164);
+$color-tres			: rgb(41,0,164);
+$color-cuatro     	: rgb(41,0,164); //ocre
+$color-cinco     	: red; //rojo menu
+$compcolor      	: rgb(206,240,227);
+
+/**
+ * Escala de grises
+ */
+$black 				: rgb(0,0,0);
+$black-alpha 		: rgba(0,0,0,0.2);
+$superdark  		: lighten($black, 10%);
+$darkergrey 		: lighten($black, 15%);
+$darkgrey 			: lighten($black, 25%);
+$grey 				: lighten($black, 50%);
+$lightgrey 			: lighten($black, 75%);
+$lightergrey 		: lighten($black, 80%);
+$white 				: rgb(255,255,255);
+$white-alpha 		: rgba(255,255,255,0.5);
+
+// Bordes
+$bordercolor    	: $white;
+$bordercolorhover   : $color-base;
+// Web
+$baseheadingfontcolor 		: $white;
+$background			: 	lighten($color-base, 47%);
+$textcolor			: 	$white;
+$textcolor-strong	:	$white;
+
+// Links  //////////////////////
+$linkcolor 			: $white;
+$linkcolorhover 	: lighten($linkcolor, 10%);
+$linkcolorvisited   : $linkcolor;
+$linkcolorfocus 	: $linkcolorvisited;
+
+$color-alert 		: rgb(252,228,207);
+$color-error 		: rgb(218,79,73);
+$color-info 		: $lightergrey;
+$color-inverse 	: invert($color-base);
+$color-success 	: rgb(91,183,91);
+$color-warning 	: $color-error;
+
+// Texturas de popups
+$alertbordercolor	: darken($color-alert, 20%);
+$alertborderwidth 	: 2px;
+$alertborderstyle 	: solid;
+$alerttext		: darken($color-alert, 60%);
+
+// Error
+$alerterrorcolor 	: lighten($color-error, 30%);
+$alerterrorborder  	: lighten($color-error, 20%);
+$alerterrortext 	: $color-error;
+
+// Info
+$alertinfocolor 	: lighten($color-info, 10%);
+$alertinfoborder  	: darken($color-info, 10%);
+$alertinfotext 	: $black;
+$alertinfobg 	: rgba(255,255,255,0.2);
+
+// Inverso
+$alertinversecolor 	: $color-inverse;
+$alertinverseborder : $black;
+$alertinversetext 	: $white;
+
+// Success
+$alertsuccesscolor 	: lighten($color-success, 30%);
+$alertsuccessborder : lighten($color-success, 20%);
+$alertsuccesstext 	: darken($color-success, 20%);
+
+// Advertencia
+$alertwarningcolor 	: lighten($color-warning, 30%);
+$alertwarningborder : lighten($color-warning, 20%);
+$alertwarningtext 	: darken($color-warning, 20%);
+
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+$fb :rgb(59, 89, 182);
+$tw :rgb(64,153,255);
+$googleplus :rgb(221, 75, 57);
+$pinterest :rgb(203, 32, 39);
+$skype :rgb(18,165,244);
+$spotify :rgb(129,183,26);
+$instagram:#4E433C;
+$tumblr: #2B4964;
+$vimeo: #86B32D;
+$soundcloud: #f76600;
+$youtube: #FF3333;
+$linkedin: #4875B4;
+$flickr: #FE0883;
+$foursquare: #8FD400;
+
+// bars
+//$bar-height		: #{$basefontsize / 2}px;
+
+// badges
+$badgebackground    : $color-base;
+$badgecolor         : $textcolor;
+
+// botones
+$buttonbackground   : $color-base-light;
+$buttonbordercolor  : darken($buttonbackground, 10%);
+$buttonbottombordercolor : darken($buttonbordercolor, 10%);
+$buttoncolor        : $black;
+$buttonborderwidth  : 1px;
+$buttonborderstyle  : solid;
+
+// boxes (well)
+$wellbackground     : $lightergrey;
+$wellbordercolor    : darken($wellbackground, 10%);
+$wellborderwidth    : 0;
+$wellborderstyle    : solid;
+$wellshadow         : darken($wellbackground, 5%);
+$wellshadowblur     : 15px;
+
+// tablas
+$tablebackground    : transparent;
+$tablestripe        : lighten($color-base, 60%);
+$tablehover         : lighten($color-base, 50%);
+$tableborder        : lighten($color-base, 40%);
+$tableborderwidth   : 1px;
+$tableborderstyle   : solid;
+
+// formularios
+$inputbackground    : $white;
+$inputborder        : $lightgrey;
+$inputborderwidth   : 1px;
+$inputborderstyle   : dotted;
+$inputhover         : lighten($black, 50%);
+$inputfocus         : $color-base, 40%;
+$placeholdercolor   : $lightergrey;
+
+
+// Navegación
+$navitembordercolor    : $bordercolor;
+$navitempadding        : $gutterwidth / 2;
+$navtabsbordercolor    : $bordercolor;
+
+// Bordes
+$borde				: 2px solid $bordercolor;
+$bordehover			: 2px solid $bordercolorhover;

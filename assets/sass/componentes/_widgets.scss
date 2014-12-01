@@ -1,0 +1,170 @@
+/*------------------------------------*\
+    $WIDGETS
+\*------------------------------------*/
+
+
+// Idiomas
+.idiomas {
+	margin : $baselineheight/2;
+	display: table;
+	display: none;
+	width: 90px;
+	float: right;
+	padding : 8px 35px 8px 14px;
+	line-height: 1;
+	@extend %text-center;
+	background-color: $alertinfobg;
+
+	li {
+		display: table-cell;
+		@include font-size(18);
+	}
+	.idiomas__item {}
+}
+
+// Alerts
+.alert {
+	display: none;
+	@media screen and (min-width: $bp3) {
+		display: block;
+		margin : $baselineheight/2;
+		padding : 8px 35px 8px 14px;
+		background-color : $color-base;
+		border : $alertborderwidth $alertborderstyle $alertbordercolor;
+		font-family : $basefont;
+		@include font-size(18);
+		color: $alerttext;
+		// border-radius: $radius;
+		// @extend %full-width;
+	}
+
+	.alert--heading {
+		color : inherit;
+	}
+
+	.close {
+		position 		: relative;
+		top 			: -2px;
+		right 		: -21px;
+		float 		: right;
+		@include font-size(21);
+		font-weight 	: bold;
+		line-height 	: 18px;
+		color 		: inherit;
+	}
+}
+
+	.alert--success {
+		background-color 	: $alertsuccesscolor;
+		border-color 		: $alertsuccessborder;
+		color 			: $alertsuccesstext;
+	}
+
+	.alert--warning {
+		background-color 	: $alertwarningcolor;
+		border-color 		: $alertwarningborder;
+		color 			: $alertwarningtext;
+	}
+
+	.alert--error {
+		background-color 	: $alerterrorcolor;
+		border-color 		: $alerterrorborder;
+		color 			: $alerterrortext;
+	}
+
+	.alert--info {
+		@extend %text-center;
+		width: 196px;
+		padding: 6px 0;
+		line-height: 1;
+		float: right;
+		border: none;
+		background-color: $alertinfobg;
+		// border-color 	: $alertinfoborder;
+		color 			: $alertinfotext;
+
+	}
+
+	.alert--inverse {
+		background-color 	: $alertinversecolor;
+		border-color 		: $alertinverseborder;
+		color 			: $alertinversetext;
+	}
+
+// alert block
+
+	.alert--block {
+		display: none;
+		@extend %full-width;
+		@extend %text-right;
+		@media screen and (min-width: $bp3) {
+			padding: 0 $gutterwidth 0;
+			display: table;
+			@include max-width($bp1);
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			.alert--heading {
+				margin-bottom : $baselineheight / 8;
+				font-size : inherit;
+				font-weight : bold;
+			}
+		}
+
+		> p,
+		> ul {
+			margin-bottom : 0;
+		}
+
+		p + p {
+			margin-top : 5px;
+		}
+	}
+
+
+// Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
+
+// WELL ====================================================
+
+.well {
+	min-height : $paddingbase;
+	padding : ($paddingbase / 2) $paddingbase;
+	border-radius: $radius;
+	margin-bottom : $baselineheight;
+	background-color : $wellbackground;
+	border : $wellborderwidth $wellborderstyle $wellbordercolor;
+	@include box-shadow(inset 0 1px $wellshadowblur $wellshadow);
+
+	p:last-child {
+		margin-bottom : 0;
+	}
+}
+
+	.well--large {
+		padding : ($paddingbase * 2) ($paddingbase * 2);
+		@extend %text-center;
+		background-color: transparent;
+		border: none;
+		border-radius: none;
+		box-shadow: none;
+	}
+
+	.well--small {
+		padding : 6px;
+	}
+
+
+
+// Web Colours
+::-moz-selection {
+	background-color : $color-base;
+	color : $black;
+	text-shadow : none;
+}
+
+::selection {
+	background-color : $color-base;
+	color : $black;
+	text-shadow : none;
+}
