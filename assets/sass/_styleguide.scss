@@ -3,7 +3,7 @@
 \*------------------------------------*/
 
 //Añademe dinamicamente el nombre de la clase
-li::before, a::before, .block__item::before {
+li::before, a::before, .component__xx__item::before {
     content: "" attr(class); // wow!
     color: $black;
     font-size: .8rem;
@@ -11,17 +11,21 @@ li::before, a::before, .block__item::before {
     padding-left: 10px;
   }
 
-// Colores
-.section__color {
+// Section
+.section {
+	@extend %margin-vertical;
+}
+.section__xx {
   display: table;
   @extend %full-width;
+  @include max-width($bp2);
 }
-  .section__color--item {
+  .section__xx__item {
     display: table-cell;
   }
 
-.maxwidth__bp1 {
-  @include max-width($bp1);
+.article {
+	@include max-width($bp2);
 }
 
 .img__bg {
@@ -31,7 +35,7 @@ li::before, a::before, .block__item::before {
   @extend %imgbgsize-contain;
 }
 
-//Data atributes
+// Links
 a[href^="http://"]::after { // ^ empieza por...
   content: " (enlace externo)";    
   color: $color-base-dark;
@@ -45,20 +49,20 @@ a[target="_blank"]::after {
     COMPONENTES
 \*------------------------------------*/
 
-//Bloque de contenido
 @media all and (min-width: $bp3) {
-  .block__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
+  .component__xx {
+    @include flexbox;
+	@include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include flex-direction(row);
   }
 }
 
-.block__item {
+.component__xx__item {
+
   list-style: none;
   margin-bottom: $gutterwidth;
-  background-color: #f3f3f3;
+  background-color: $white;
   @include font-size(18);
   min-height: 100px;
 
@@ -77,9 +81,9 @@ a[target="_blank"]::after {
 
 // Componente galeria
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	@include flexbox;
+	@include flex-wrap(wrap);
+    @include justify-content(space-between);
 }
 .gallery__item {
   position: relative;

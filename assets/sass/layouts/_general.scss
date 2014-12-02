@@ -10,15 +10,18 @@ body {
 	color: $textcolor;
 	// @include background-image(bg,cover,jpg);
 }
+
+.main__nav { z-index: -1; }
+.main { }
+
 img {
+  @include max-width($bp1);
   @extend %full-width;
-  width: 100%;
 }
+
 h1 {font-size: 10vw;}
 
-.section {
-	@extend %margin-vertical;
-}
+
 
 // Layers
 input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {z-index: -1}
