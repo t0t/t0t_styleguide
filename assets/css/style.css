@@ -2334,7 +2334,7 @@ input:required:focus:valid {
   width: 50px;
   content: "☰";
   z-index: 5;
-  font-size: 150%;
+  font-size: 2rem;
   padding: 5px;
   text-align: center;
 }
@@ -2395,6 +2395,40 @@ input:required:focus:valid {
 /*------------------------------------*\
     STYLEGUIDE
 \*------------------------------------*/
+h1::before, h2::before, h3::before, blockquote::before, table::before, ol::before, ul::before {
+  font-size: .7rem;
+  display: block;
+  color: rgba(130, 10, 100, 0.2);
+}
+
+h1::before {
+  content: "<h1>";
+}
+
+h2::before {
+  content: "<h2>";
+}
+
+h3::before {
+  content: "<h3>";
+}
+
+blockquote::before {
+  content: "<Blockquote>";
+}
+
+table::before {
+  content: "<Table>";
+}
+
+ol::before {
+  content: "Lista ordenada";
+}
+
+ul::before {
+  content: "Lista desordenada";
+}
+
 li::before, a::before, .component__xx__item::before {
   content: "" attr(class);
   color: black;
