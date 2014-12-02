@@ -10,8 +10,8 @@ body {
 	color: $textcolor;
 	// @include background-image(bg,cover,jpg);
 }
-
-.main__nav { z-index: -1; }
+header {}
+.main__nav { }
 .main { }
 
 img {
@@ -24,8 +24,8 @@ h1 {font-size: 10vw;}
 
 
 // Layers
-input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {z-index: -1}
-input[type="checkbox"]:checked + label::after { z-index:5}
+input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {}
+input[type="checkbox"]:checked + label::after { }
 
 // Mascaras
 img {

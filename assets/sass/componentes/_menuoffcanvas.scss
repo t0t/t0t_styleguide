@@ -1,16 +1,13 @@
 // menu off canvas
 .main__nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  
+
     * {
       transition: all .2s ease-in;
     }
 
     a {
       padding: $gutterwidth;
-      color: white;
+      color: $white;
       text-transform: uppercase;
 
       &:hover {
@@ -38,6 +35,8 @@
   }
 
   > ul { //el overlay
+    position: absolute;
+    top: 0;
     transform: translate(100%,0); //vete fuera del escenario
     width: 100%;
     background-color: red;
@@ -68,6 +67,7 @@
 
   input[type="checkbox"]:checked ~ ul {
     //height: auto;
+
     transform: translate(0,0);
     transition: all .2s ease-in;
   }

@@ -663,10 +663,6 @@ body {
   color: black;
 }
 
-.main__nav {
-  z-index: -1;
-}
-
 img {
   margin-left: auto;
   margin-right: auto;
@@ -676,14 +672,6 @@ img {
 
 h1 {
   font-size: 10vw;
-}
-
-input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {
-  z-index: -1;
-}
-
-input[type="checkbox"]:checked + label::after {
-  z-index: 5;
 }
 
 img {
@@ -2324,18 +2312,13 @@ input:required:focus:valid {
   border: 1px solid #5bb75b;
 }
 
-.main__nav {
-  position: fixed;
-  width: 100%;
-  top: 0;
-}
 .main__nav * {
   -webkit-transition: all .2s ease-in;
           transition: all .2s ease-in;
 }
 .main__nav a {
   padding: 3%;
-  color: white;
+  color: rgba(130, 10, 100, 0.5);
   text-transform: uppercase;
 }
 .main__nav a:hover {
@@ -2360,6 +2343,8 @@ input:required:focus:valid {
   }
 }
 .main__nav > ul {
+  position: absolute;
+  top: 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -2524,7 +2509,6 @@ a[target="_blank"]::after {
 .gallery__item {
   position: relative;
   width: 50%;
-  z-index: 1;
   text-align: center;
 }
 @media (min-width: 600px) {

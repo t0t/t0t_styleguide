@@ -88,7 +88,6 @@ a[target="_blank"]::after {
 .gallery__item {
   position: relative;
   width: 50%;
-  z-index: 1;
     //magia!!
     @media (min-width: $bp3) {
       width: calc(20% - #{$gutterwidth});
