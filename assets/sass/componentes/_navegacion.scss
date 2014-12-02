@@ -118,3 +118,27 @@ Main navbar
       }
     }
 }
+
+
+.nav__uno {
+  @extend %full-width;
+}
+  .nav__uno__item {
+      @extend %inline-block;
+      width: 25%;
+      line-height: 3;
+      text-align: center;
+      background-color: $color-base;
+      border-right: 1px solid $white;
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+.nav__dos {
+  @extend %display-table;
+  @extend %full-width;
+} 
+  .nav__dos__item {
+    display: table-cell;
+  }

@@ -28,6 +28,7 @@ li::before, a::before, .block__item::before {
   background-image: url('#{$image-path}logoyo.png');
   background-color: $color-base;
   background-repeat: no-repeat;
+  @extend %imgbgsize-contain;
 }
 
 //Data atributes
@@ -119,61 +120,11 @@ a[target="_blank"]::after {
 }
 
 
-/*------------------------------------*\
-    NAVEGACION
-\*------------------------------------*/
-
-
-.nav__uno {
-  width: 100%;
-}
-  .nav__uno__item {
-      @extend %inline-block;
-      width: 25%;
-      line-height: 3;
-      text-align: center;
-      background-color: $color-base;
-      border-right: 1px solid $white;
-      &:last-child {
-        border-right: none;
-      }
-    }
-
-.nav__dos {
-  display: table;
-  width: 100%;
-} 
-  .nav__dos__item {
-    display: table-cell;
-  }
-
-
-
-
-
-
-	// El otro mixin es para galerias
-	.galeria__item {
-		@include galeria(6);
-		min-height: 185px;
-		@media (max-width: $bp3) {
-			@include galeria(2);
-		}
-	}
-
-// FORMAS
-	.square {
-		@include square(100px);
-	}
-	
-
 // COLORES
 	.color-base {
 		background-color: $color-base;
-		&:before {
+		&::before {
 			content: "#{$color-base}";
-			color: white;
-			@extend %display-block;
 		}
 	}
 
@@ -181,8 +132,6 @@ a[target="_blank"]::after {
 		background-color: $color-base-invert;
 		&::before {
 			content: "#{$color-base-invert}";
-			color: white;
-			@extend %display-block;
 		}
 	}
 
@@ -190,8 +139,6 @@ a[target="_blank"]::after {
 		background-color: $color-base-light;
 		&::before {
 			content: "#{$color-base-light}";
-			color: white;
-			@extend %display-block;
 		}
 	}
 
@@ -199,17 +146,6 @@ a[target="_blank"]::after {
 		background-color: $color-base-lighter;
 		&::before {
 			content: "#{$color-base-lighter}";
-			color: white;
-			@extend %display-block;
-		}
-	}
-
-	.color-base-lighten { 
-		background-color: $color-base-lighten;
-		&::before {
-			content: "#{$color-base-lighten}";
-			color: white;
-			@extend %display-block;
 		}
 	}
 
@@ -217,27 +153,5 @@ a[target="_blank"]::after {
 		background-color: $color-base-dark;	
 		&::before {
 			content: "#{$color-base-dark}";
-			color: white;
-			@extend %display-block;
 		}
-	}
-
-	.color-base-darken { 
-		background-color: $color-base-darken;
-		&::before {
-			content: "#{$color-base-darken}";
-			color: white;
-			@extend %display-block;
-		}
-
-	}
-
-	.color-base-darker { 
-		background-color: $color-base-darker;
-		&::before {
-			content: "#{$color-base-darker}";
-			color: white;
-			@extend %display-block;
-		}
-
 	}

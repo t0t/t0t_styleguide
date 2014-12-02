@@ -30,8 +30,14 @@
 %display-block {
   display: block;
 }
+%display-table {
+  display: table;
+}
 %full-width {
   width: 100%;
+}
+%imgbgsize-contain {
+  background-size: contain;
 }
 %icon {
   transition: background-color ease .2s;
