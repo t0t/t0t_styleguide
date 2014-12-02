@@ -26,6 +26,7 @@
     right: 15px;
     width: 50px;
     content: "☰";
+    z-index: 5;
     font-size: 150%;
     padding: 5px;
     text-align: center;
@@ -35,7 +36,7 @@
   }
 
   > ul { //el overlay
-    position: absolute;
+    position: fixed;
     top: 0;
     transform: translate(100%,0); //vete fuera del escenario
     width: 100%;
@@ -66,8 +67,7 @@
   }
 
   input[type="checkbox"]:checked ~ ul {
-    //height: auto;
-
+    z-index: 4;
     transform: translate(0,0);
     transition: all .2s ease-in;
   }
