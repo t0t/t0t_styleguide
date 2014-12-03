@@ -2315,7 +2315,7 @@ input:required:focus:valid {
   display: block;
 }
 .main__nav a:hover {
-  background-color: red;
+  background-color: green;
 }
 .main__nav label::after {
   position: fixed;
@@ -2353,10 +2353,6 @@ input:required:focus:valid {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-<<<<<<< HEAD
-  background-color: red;
-=======
->>>>>>> menuflexbox
   height: 100vh;
   width: 100%;
   margin: 0;
