@@ -40,13 +40,13 @@
     top: 0;
     transform: translate(100%,0); //vete fuera del escenario
     width: 100%;
-    background-color: red;
+    margin: 0;
+    padding: 0;
+    background-color: $compcolor;
     text-align: center;
-    font-size: 60%;
     
     @media all and (min-width: $bp3) {
       transform: translate(150%,0); //vete aun mas lejos
-      font-size: inherit;
     }
 
     > li { //1st level
@@ -57,11 +57,13 @@
       
       a {
         display: block;
+        height: 50px;
         height: 25vh;
-        line-height: 8;
         @extend %basepadding;
         text-decoration: none;
         flex-direction: column;
+        font-size: 8vw;
+        line-height: 1;
       }
     }
   }

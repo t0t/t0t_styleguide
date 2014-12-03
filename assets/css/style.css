@@ -2350,16 +2350,16 @@ input:required:focus:valid {
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
   width: 100%;
-  background-color: red;
+  margin: 0;
+  padding: 0;
+  background-color: #cef0e3;
   text-align: center;
-  font-size: 60%;
 }
 @media all and (min-width: 600px) {
   .main__nav > ul {
     -webkit-transform: translate(150%, 0);
         -ms-transform: translate(150%, 0);
             transform: translate(150%, 0);
-    font-size: inherit;
   }
 }
 .main__nav > ul > li {
@@ -2370,12 +2370,14 @@ input:required:focus:valid {
 }
 .main__nav > ul > li a {
   display: block;
+  height: 50px;
   height: 25vh;
-  line-height: 8;
   text-decoration: none;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 8vw;
+  line-height: 1;
 }
 .main__nav input[type="checkbox"]:checked ~ ul {
   z-index: 4;
@@ -2395,7 +2397,7 @@ input:required:focus:valid {
 /*------------------------------------*\
     STYLEGUIDE
 \*------------------------------------*/
-h1::before, h2::before, h3::before, blockquote::before, table::before, ol::before, ul::before {
+h1::before, h2::before, h3::before, blockquote::before, table::before, .list-ordered::before, .list-unordered::before {
   font-size: .7rem;
   display: block;
   color: rgba(130, 10, 100, 0.2);
@@ -2421,20 +2423,12 @@ table::before {
   content: "<Table>";
 }
 
-ol::before {
+.list-ordered::before {
   content: "Lista ordenada";
 }
 
-ul::before {
+.list-unordered::before {
   content: "Lista desordenada";
-}
-
-li::before, a::before, .component__xx__item::before {
-  content: "" attr(class);
-  color: black;
-  font-size: .8rem;
-  line-height: .5;
-  padding-left: 10px;
 }
 
 .section__xx {

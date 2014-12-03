@@ -22,18 +22,18 @@ h2::before { content: "#{$h2}"; @extend %indicador; }
 h3::before { content: "#{$h3}"; @extend %indicador; }
 blockquote::before { content: "#{$blockquote}"; @extend %indicador; }
 table::before { content: "#{$table}"; @extend %indicador; }
-ol::before { content: "#{$ol}"; @extend %indicador; }
-ul::before { content: "#{$ul}"; @extend %indicador; }
+.list-ordered::before { content: "#{$ol}"; @extend %indicador; }
+.list-unordered::before { content: "#{$ul}"; @extend %indicador; }
 
 
 //Añademe dinamicamente el nombre de la clase
-li::before, a::before, .component__xx__item::before {
-    content: "" attr(class); // wow!
-    color: $black;
-    font-size: .8rem;
-    line-height: .5;
-    padding-left: 10px;
-  }
+// li::before, a::before, .component__xx__item::before {
+//     content: "" attr(class); // wow!
+//     color: $black;
+//     font-size: .8rem;
+//     line-height: .5;
+//     padding-left: 10px;
+//   }
 
 // Section
 .section {
