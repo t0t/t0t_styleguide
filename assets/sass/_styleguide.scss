@@ -1,11 +1,15 @@
 /*------------------------------------*\
     STYLEGUIDE
 \*------------------------------------*/
-
+body {
+	* {
+		border: 1px dashed #ccc;
+	}
+}
 // Indicadores
 %indicador {
 	font-size: .7rem;
-	display: block;
+	display: inline;
 	color: $color-base;
 }
 
@@ -35,116 +39,6 @@ table::before { content: "#{$table}"; @extend %indicador; }
 //     padding-left: 10px;
 //   }
 
-// Section
-.section {
-	@extend %margin-vertical;
-}
-.section__xx {
-  display: table;
-  @extend %full-width;
-  @include max-width($bp2);
-}
-  .section__xx__item {
-    display: table-cell;
-  }
-
-.article {
-	@include max-width($bp2);
-}
-
-.img__bg {
-  background-image: url('#{$image-path}logoyo.png');
-  background-color: $color-base;
-  background-repeat: no-repeat;
-  @extend %imgbgsize-contain;
-}
-
-// Links
-a[href^="http://"]::after { // ^ empieza por...
-  content: " (enlace externo)";    
-  color: $color-base-dark;
-}
-a[target="_blank"]::after {
-  content: " \2714";
-  color: $color-base-dark;
-}
-
-/*------------------------------------*\
-    COMPONENTES
-\*------------------------------------*/
-
-@media all and (min-width: $bp3) {
-  .component__xx {
-    @include flexbox;
-	@include flex-wrap(wrap);
-    @include justify-content(space-between);
-    @include flex-direction(row);
-  }
-}
-
-.component__xx__item {
-
-  list-style: none;
-  margin-bottom: $gutterwidth;
-  background-color: $white;
-  @include font-size(18);
-  min-height: 100px;
-
-  //magia!!
-  @media all and (min-width: $bp3) {
-    width: calc(25% - #{$gutterwidth});
-  }
-  @media all and (min-width: $bp2) {
-    width: calc(33.33% - #{$gutterwidth});
-  }
-  @media all and (min-width: $bp1) {
-    width: calc(25% - #{$gutterwidth});
-  }
-
-}
-
-// Componente galeria
-.gallery {
-	@include flexbox;
-	@include flex-wrap(wrap);
-    @include justify-content(space-between);
-}
-.gallery__item {
-  position: relative;
-  width: 50%;
-    //magia!!
-    @media (min-width: $bp3) {
-      width: calc(20% - #{$gutterwidth});
-    }
-  text-align: center;
-  
-	.gallery__caption {
-    transition: all .2s;
-    font-size: 12px; // fallback + progressive enhancement
-    font-size: 1rem;
-
-	&::after {
-		width: 2em;
-		height: 2em;
-		transition: all .7s;
-		content: "+" !important;
-		position: absolute;        
-		transform: translate(-40px, -70px);
-		font-size: 12px; 
-		font-size: 2rem;
-		background-color: $white;
-		line-height: 2em;
-	    text-align: center;
-	    border-radius: 100%;
-	}
-		
-	&:hover::after {
-		content: ">" !important;
-       transform: translate(-15px, -20px);
-			background-color: $color-base;
-		}
-	}
-}
 
 
 // COLORES
