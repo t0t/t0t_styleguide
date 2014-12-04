@@ -940,6 +940,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/modulos\/modulo-post.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/modulos\/modulo-post.kit",
+		"outputAbbreviatedPath": "\/includes\/modulos\/modulo-post.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/includes\/modulos\/modulo-x1.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -987,7 +996,7 @@
 		},
 	"\/includes\/section.kit": {
 		"fileType": 2048,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/section.kit",
 		"outputAbbreviatedPath": "\/includes\/section.html",

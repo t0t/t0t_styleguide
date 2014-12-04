@@ -12,14 +12,6 @@ body {
 
 h1 {font-size: 10vw;}
 
-figure + p {
-	background-color: red;
-} 
-figure {
-	p & {
-		background-color: yellow;
-	}
-}
 
 img {
   @include max-width($bp1);

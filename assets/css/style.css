@@ -455,7 +455,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .idiomas, .alert--info, .w
   text-align: center;
 }
 
-.h-entry .entry-content h1, .alert--block {
+.alert--block {
   text-align: right;
 }
 
@@ -552,26 +552,19 @@ article, aside, figure, footer, header, hgroup, nav, section {
   box-sizing: border-box;
 }
 
-.h-entry .entry-content {
-  position: relative;
-}
-.h-entry .entry-content h1 {
-  position: absolute;
-  top: 10%;
-  left: 13%;
-  width: 250px;
-}
-.h-entry .entry-content .btn--primary {
-  position: absolute;
-  top: 70%;
-  right: 45%;
+.modulo-post {
+  background-color: pink;
+  display: table;
 }
 
-.post {
-  border-bottom: 2px solid rgba(130, 10, 100, 0.5);
+.modulo-post__figure {
+  width: 30%;
+  float: left;
 }
-.post:last-child {
-  border-bottom: none;
+
+.modulo-post__figure + p {
+  font-family: "Times New roman", serif;
+  font-weight: 700;
 }
 
 .sidebar {
@@ -656,14 +649,6 @@ body {
 
 h1 {
   font-size: 10vw;
-}
-
-figure + p {
-  background-color: red;
-}
-
-p figure {
-  background-color: yellow;
 }
 
 img {
