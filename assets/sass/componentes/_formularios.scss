@@ -270,21 +270,29 @@ input:-moz-placeholder {
 @media all and (min-width: $bp3) {
 	.form-contacto {
 		display: flex;
-		flex-flow: column nowrap;
+		flex-flow: column wrap;
 		background-color: #f3f3f3;
+		@include max-width($bp2);
 	}
 	.form-contacto__input-group {
 		display: flex;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
+		background-color: pink;
+		margin: 10px 0;
 
 		label {
 			white-space: nowrap;
-			margin: 0 10px;
+			margin-right: 10px;
+			text-align: right;
+			background-color: yellow;
+
 		}
 		input {
-			flex: 1;
 			max-width: 20%;
+		}
+		label, input {
+			width: 20%;
 		}
 	}	
 }
