@@ -61,30 +61,22 @@ $baseletterspacing 	: 1px;
 /**
  * Brand stuff
  */
-$color-base			: rgba(130,10,100,.2);
-$color-base-invert 	: complement($color-base); //invierte
-$color-base-light	: lighten($color-base, 3%);
-$color-base-lighten	: lighten($color-base, 5%);
-$color-base-lighter	: lighten($color-base, 10%);
-$color-base-dark	: darken($color-base, 10%);
-$color-base-darken	: darken($color-base, 40%);
-$color-base-darker	: darken($color-base, 80%);
-$compcolor      	: rgb(206,240,227);
+$color-base			: rgb(206,240,227);
+$color-base-invert 	: complement($color-base);
+$color-base-light	: lighten($color-base, 2%);
+$color-base-lighten	: lighten($color-base, 10%);
+$color-base-dark	: darken($color-base, 5%);
+$color-base-darken	: darken($color-base, 10%);
 
 /**
  * Escala de grises
  */
 $black 				: rgb(0,0,0);
 $black-alpha 		: rgba(0,0,0,0.2);
-$superdark  		: lighten($black, 10%);
-$darkergrey 		: lighten($black, 15%);
-$darkgrey 			: lighten($black, 25%);
-$grey 				: lighten($black, 50%);
-$lightgrey 			: lighten($black, 75%);
-$lightergrey 		: lighten($black, 80%);
 $white				: opacify($color-base,.3);
 $white-alpha 		: rgba(255,255,255,0.5);
-
+$lightgrey			: lighten($black, 30%);
+$grey				: lighten($black, 50%);
 // Bordes
 $bordercolor    	: $white;
 $bordercolorhover   : $color-base;
@@ -102,7 +94,7 @@ $linkcolorfocus 	: $linkcolorvisited;
 
 $color-alert 		: rgb(252,228,207);
 $color-error 		: rgb(218,79,73);
-$color-info 		: $lightergrey;
+$color-info 		: $color-base-invert;
 $color-inverse 	: invert($color-base);
 $color-success 	: rgb(91,183,91);
 $color-warning 	: $color-error;
@@ -154,23 +146,17 @@ $buttoncolor        : $black;
 $buttonborderwidth  : 1px;
 $buttonborderstyle  : solid;
 
-// boxes (well)
-$wellbackground     : $lightergrey;
-$wellbordercolor    : darken($wellbackground, 10%);
-$wellborderwidth    : 0;
-$wellborderstyle    : solid;
-$wellshadow         : darken($wellbackground, 5%);
-$wellshadowblur     : 15px;
+
 
 
 // formularios
 $inputbackground    : $white;
-$inputborder        : $lightgrey;
+$inputborder        : $color-base;
 $inputborderwidth   : 1px;
 $inputborderstyle   : dotted;
 $inputhover         : lighten($black, 50%);
 $inputfocus         : $color-base, 40%;
-$placeholdercolor   : $lightergrey;
+$placeholdercolor   : $color-base-darken;
 
 
 // Navegación

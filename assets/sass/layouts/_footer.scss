@@ -1,16 +1,11 @@
-// Footer
-
-address, p, form {
-	margin-bottom: 0;
-}
-
+// Modulo main-footer
 .main-footer {
 	@include max-width ($bp1);
 	@extend %inline-block;
 }
 
 
-
+// Info adicional
 .info-adicional {
 	display: table;
 	border-collapse: separate;
@@ -24,17 +19,7 @@ address, p, form {
 		width: 50%;
 		height: 100px;
 	}
-	.muestras {
-		@include background-image(add_maderlim,cover,jpg);
-		background-position: center;
-	}
-	.contacto {
-		background-color: $color-base;
-		padding-top: $gutterwidth;
-		@media screen and (min-width: $bp3) {
 
-		}
-	}
 	a {
 		display: block;
 		width: 100%;

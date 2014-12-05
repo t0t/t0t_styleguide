@@ -132,9 +132,7 @@
 	padding : ($paddingbase / 2) $paddingbase;
 	border-radius: $radius;
 	margin-bottom : $baselineheight;
-	background-color : $wellbackground;
-	border : $wellborderwidth $wellborderstyle $wellbordercolor;
-	@include box-shadow(inset 0 1px $wellshadowblur $wellshadow);
+	background-color : $color-base-light;
 
 	p:last-child {
 		margin-bottom : 0;
@@ -156,15 +154,3 @@
 
 
 
-// Web Colours
-::-moz-selection {
-	background-color : $color-base;
-	color : $black;
-	text-shadow : none;
-}
-
-::selection {
-	background-color : $color-base;
-	color : $black;
-	text-shadow : none;
-}

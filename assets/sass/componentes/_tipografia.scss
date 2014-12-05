@@ -21,7 +21,7 @@ h6 {
 	text-rendering 	: optimizelegibility;
 		
 		&.altheader {
-			// color:$grey;
+			// color:$color-base-dark;
 			//font-weight: 600;
 			// text-transform: uppercase;
 		}
@@ -32,7 +32,7 @@ h2 small,
 h3 small {
 	font-weight : normal;
 	@extend %display-block;
-	color : $grey;
+	color : $color-base-dark;
 }
 
 @each $header, $margin-bot, $font-size, $line-height in 
@@ -100,7 +100,7 @@ blockquote  {
 	p {
 		@include font-size(21);
 		@include margin-bottom(0);
-		color:$grey;
+		color:$color-base-dark;
 	}
 }
 

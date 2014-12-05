@@ -98,12 +98,12 @@ input[type="submit"].btn:hover {
 */
 .btn--slider {
 	background-color: $color-base;
-	color : $color-base-darker;
+	color : $color-base-darken;
 	&:hover {
 		color : lighten($color-info, 40%);
 	}
 	&:visited {
-		color : $color-base-darker;
+		color : $color-base-darken;
 	}
 }
 .btn--info {
@@ -138,7 +138,7 @@ input[type="submit"].btn:hover {
 	// height: 100%;
 	@extend %clearfix;
 	&:hover {
-		color: $color-base-darker;
+		color: $color-base-darken;
 		// background-color: $color-inverse;
 		background-color: $color-base;
 		// box-shadow: 4px 5px 0 $color-base-darken;
