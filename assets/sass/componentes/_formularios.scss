@@ -15,7 +15,7 @@ form {
 	legend {
 		@extend %display-block;
 		@extend %full-width; //width:100%
-		margin-bottom : $baselineheight * 2;
+		margin-bottom : $baselineheight;
 		padding : 0;
 		color : $textcolor;
 		border : 0;
@@ -42,6 +42,14 @@ form {
 		display : none;
 	}
 }
+
+
+
+
+
+
+
+
 
 label,
 input,
@@ -253,6 +261,39 @@ input:-moz-placeholder {
 	padding-left : 5px;
 }
 
+
+
+
+
+
+// .form--contacto
+@media all and (min-width: $bp3) {
+	.form-contacto {
+		display: flex;
+		flex-flow: column nowrap;
+		background-color: #f3f3f3;
+	}
+	.form-contacto__input-group {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		label {
+			white-space: nowrap;
+			margin: 0 10px;
+		}
+		input {
+			flex: 1;
+			max-width: 20%;
+		}
+	}	
+}
+
+
+
+
+
+
 // .form-inline
 
 .form-inline input,
@@ -333,21 +374,5 @@ input:required:focus:invalid {
 input:required:focus:valid {
   	background-color:lighten($color-success, 40%);
   	border:1px solid $color-success;
-}
-
-
-// Contact Form 7
-.wpcf7-form-control-wrap {}
-.your-name {}
-
-input {
-	.wpcf7-form {}
-	.wpcf7-form-control {}
-	.wpcf7-text {}
-	.wpcf7-validates-as-required {}
-	.wpcf7-textarea {}
-	.wpcf7-submit {}
-	.wpcf7-response-output {}
-	.wpcf7-display-none {}
 }
 

@@ -647,30 +647,6 @@ img {
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-.wpcf7 {
-  display: table-cell;
-  width: 75%;
-}
-@media screen and (max-width: 600px) {
-  .wpcf7 {
-    display: table-row;
-  }
-}
-
-.mapp-iw {
-  color: black;
-}
-
-@media all and (max-width: 600px) {
-  .nav-arrows {
-    display: none;
-  }
-}
-
-.page-template-template-contacto-php .sello {
-  display: none;
-}
-
 /*------------------------------------*\
     MODULOS (componenetes, widgets, bloques...)
 \*------------------------------------*/
@@ -815,6 +791,30 @@ img {
     opacity: 1;
   }
 }
+.wpcf7 {
+  display: table-cell;
+  width: 75%;
+}
+@media screen and (max-width: 600px) {
+  .wpcf7 {
+    display: table-row;
+  }
+}
+
+.mapp-iw {
+  color: black;
+}
+
+@media all and (max-width: 600px) {
+  .nav-arrows {
+    display: none;
+  }
+}
+
+.page-template-template-contacto-php .sello {
+  display: none;
+}
+
 .aligncenter {
   margin: 1em auto;
 }
@@ -1313,12 +1313,13 @@ a[target="_blank"]::after {
 .btn {
   display: inline-block;
   line-height: 2.6em;
-  color: #cef0e3;
+  color: black;
   text-align: center;
   vertical-align: middle;
   font-size: 100%;
   letter-spacing: 1px;
   white-space: nowrap;
+  background-color: #cef0e3;
   border: none;
   cursor: pointer;
   margin: 0;
@@ -1342,7 +1343,7 @@ a[target="_blank"]::after {
   outline: none;
 }
 .btn:visited {
-  color: #cef0e3;
+  color: #a7e4cd;
 }
 
 /*------------------------------------*\
@@ -1737,7 +1738,7 @@ ins {
 }
 
 mark {
-  background-color: white;
+  background-color: #cef0e3;
   color: black;
 }
 
@@ -2069,7 +2070,7 @@ form fieldset {
   border-width: 0;
 }
 form legend {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
   padding: 0;
   color: black;
   border: 0;
@@ -2298,6 +2299,39 @@ input:-moz-placeholder {
   padding-left: 5px;
 }
 
+@media all and (min-width: 600px) {
+  .form-contacto {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    background-color: #f3f3f3;
+  }
+
+  .form-contacto__input-group {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  .form-contacto__input-group label {
+    white-space: nowrap;
+    margin: 0 10px;
+  }
+  .form-contacto__input-group input {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 20%;
+  }
+}
 .form-inline input,
 .form-inline textarea,
 .form-inline select {

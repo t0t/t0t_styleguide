@@ -175,7 +175,7 @@ ins {
 }
 
 mark {
-	background-color : lighten($color-base, 50);
+	background-color : $color-base;
 	color : $textcolor;
 }
 

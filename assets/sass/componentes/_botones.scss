@@ -15,13 +15,13 @@
 .btn {
 	display : inline-block;
 	line-height : $baselineheight * 1.3;
-	color : $white;
+	color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
 	font-size: 100%;
 	letter-spacing: $baseletterspacing;
 	white-space:nowrap;
-	// background-color : $color-base;
+	background-color : $color-base;
 	border : none;
 	// font-weight: bold;
 	cursor : pointer;
@@ -47,7 +47,7 @@
 		outline:none;
     }
     &:visited {
-		color : $white;
+		color : $color-base-darken;
 	}
 }
 
