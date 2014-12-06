@@ -1,4 +1,3 @@
-
 /*------------------------------------*\
     $FORMULARIOS
 \*------------------------------------*/
@@ -13,19 +12,14 @@ form {
 	}
 
 	legend {
-		@extend %display-block;
-		@extend %full-width; //width:100%
-		margin-bottom : $baselineheight;
+		display : block;
+		width : 100%;
+		margin-bottom : $baselineheight * 2;
 		padding : 0;
 		color : $textcolor;
 		border : 0;
 		border-bottom : $inputborderwidth $inputborderstyle $inputborder;
 		white-space : normal;
-
-		small {
-			@include font-size(11);
-		color : $lightgrey;
-		}
 	}
 
 	p {
@@ -43,21 +37,12 @@ form {
 	}
 }
 
-
-
-
-
-
-
-
-
 label,
 input,
 button,
 select,
 textarea {
-	@include font-size($basefontsize);
-	letter-spacing: $baseletterspacing;
+	//@include font-size(24);
 	border-radius: $radius;
 	vertical-align : baseline;
 	*vertical-align : middle;
@@ -67,14 +52,13 @@ input,
 button,
 select,
 textarea {
-	font-family : $basefont;
 	@include box-sizing(border-box);
 }
 
 label {
-	@extend %display-block;
+	display : block;
 	margin-bottom : $baseline / 8;
-	font-weight : bold;
+	// font-weight : bold;
 	color : $textcolor;
 	cursor : pointer;
 
@@ -89,25 +73,21 @@ input,
 textarea,
 select {
 	display : inline-block;
-	@extend %full-width; //width:100%
-	padding : $paddingbase / 2;
+	width : 100%;
+	padding : 4px;
 	margin-bottom : $baselineheight / 4;
-	// background-color : $inputbackground;
+	background-color : $inputbackground;
 	border : $inputborderwidth $inputborderstyle $inputborder;
-	color : $black;
+	color : $textcolor;
 
 	&:hover {
 		border-color : $inputhover;
 	}
+	&:focus {
+		background-color: yellow;
+	}
 }
 
-.input-mini {
-	width : 60px;
-}
-
-.input-small {
-	width : 90px;
-}
 
 input[type="image"],
 input[type="checkbox"],
@@ -115,7 +95,7 @@ input[type="radio"] {
 	width : auto;
 	height : auto;
 	padding : 0;
-	margin : 3px 0;
+	margin : 6px 0;
 	*margin-top : 0;
 	line-height : normal;
 	cursor : pointer;
@@ -162,8 +142,8 @@ input[type="file"] {
 }
 
 select {
-	// background-color : $inputbackground;
-	// @include font-size(13);
+	background-color : $inputbackground;
+	@include font-size(13);
 }
 
 select[multiple],
@@ -186,6 +166,7 @@ input[type="hidden"] {
 .checkbox {
 	padding-left : 18px;
 	font-weight : normal;
+	background-color: red;
 }
 
 .radio input[type="radio"],
@@ -251,7 +232,7 @@ input:-moz-placeholder {
 }
 
 .help-block {
-	@extend %display-block;
+	display : block;
 	margin-bottom : $baselineheight / 2;
 }
 
@@ -260,46 +241,6 @@ input:-moz-placeholder {
 	vertical-align : middle;
 	padding-left : 5px;
 }
-
-
-
-
-
-
-// .form--contacto
-@media all and (min-width: $bp3) {
-	.form-contacto {
-		display: flex;
-		flex-flow: column wrap;
-		background-color: #f3f3f3;
-		@include max-width($bp2);
-	}
-	.form-contacto__input-group {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		background-color: pink;
-		margin: 10px 0;
-
-		label {
-			white-space: nowrap;
-			margin-right: 10px;
-			text-align: right;
-			background-color: yellow;
-
-		}
-		input {
-			max-width: 20%;
-		}
-		label, input {
-			width: 20%;
-		}
-	}	
-}
-
-
-
-
 
 
 // .form-inline
@@ -330,19 +271,27 @@ input:-moz-placeholder {
 	margin-right : 3px;
 }
 
-// .form-search
-input {
-	&.search-field {
-		width: auto;
-	}
-}
+	.form-inline__group {
 
-// .form-search input,
-// .form-search textarea,
-// .form-search select {
-// 	display : inline-block;
-// 	margin-bottom : 0;
-// }
+		@media all and (min-width:$bp3) {
+			// background-color: red;
+			// display: flex;
+			// flex-flow: row wrap;
+
+			// input { flex: 1; }
+			// label { flex: 0.5; }
+		}
+	}
+
+
+// .form-search
+
+.form-search input,
+.form-search textarea,
+.form-search select {
+	display : inline-block;
+	margin-bottom : 0;
+}
 
 .form-search .search-query {
 	padding-left : 14px;
@@ -383,4 +332,43 @@ input:required:focus:valid {
   	background-color:lighten($color-success, 40%);
   	border:1px solid $color-success;
 }
+
+
+
+
+// .form--contacto
+// @media all and (min-width: $bp3) {
+	
+// 	.form-contacto {
+// 		display: flex;
+// 		flex-flow: column nowrap;
+// 	}
+// 	.form-contacto__group {
+// 		flex: 1 100px;
+// 		display: flex;
+// 		flex-flow: row wrap;
+// 		align-items: center;
+// 		justify-content: center;
+// 		margin-bottom: $gutterwidth;
+// 		background-color: #f3f3f3;
+
+// 		label, select {
+// 			flex: 1;
+// 			margin: 0 15px;
+// 		}
+// 		label:nth-child(2) {
+// 		}
+// 		input[type="radio"] {}
+// 		input[type="radio"]:checked + label {
+// 			color: $color-base-invert;
+// 		}
+// 		input {
+// 			flex: 2;
+// 		}
+// 		input, textarea, select {
+// 		}
+// 	}
+
+// }
+
 
