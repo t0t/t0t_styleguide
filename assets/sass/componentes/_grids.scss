@@ -1,4 +1,7 @@
 // Componente para un mini grid...
+.grid-form {
+  padding: 0 $gutterwidth*2;
+}
 @media all and (min-width: $bp3) {
   .grid {
     @include flexbox;
@@ -41,7 +44,10 @@
   @media all and (min-width: $bp3) {
     width: calc(50% - #{$gutterwidth});
   }
-  @media all and (min-width: $bp2) {
+  @media all and (min-width: 768px) {
+    width: calc(100% - #{$gutterwidth});
+  }
+  @media all and (min-width: 870px) {
     width: calc(50% - #{$gutterwidth});
   }
   @media all and (min-width: $bp1) {
@@ -51,7 +57,7 @@
 }
 
 
-
+// Parteme el layout en dos columnas
 .col-6-6 {
   @include grid(6, 6);
 }

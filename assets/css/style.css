@@ -2420,6 +2420,10 @@ input:required:focus:valid {
   background-color: #cef0e3;
 }
 
+.grid-form {
+  padding: 0 6%;
+}
+
 @media all and (min-width: 600px) {
   .grid {
     display: -moz-flex;
@@ -2490,7 +2494,12 @@ input:required:focus:valid {
     width: calc(50% - 3%);
   }
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: 768px) {
+  .grid-form__item {
+    width: calc(100% - 3%);
+  }
+}
+@media all and (min-width: 870px) {
   .grid-form__item {
     width: calc(50% - 3%);
   }
