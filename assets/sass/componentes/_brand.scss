@@ -1,0 +1,13 @@
+.brand {
+	display: flex;
+}
+
+a {
+	&.brand__logo {
+		flex: 1;
+		min-height: 100px;
+		@include background-image(logo,contain,svg);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

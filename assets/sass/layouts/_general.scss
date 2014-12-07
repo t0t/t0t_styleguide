@@ -18,10 +18,10 @@ img {
 }
 	// Fondos
 	.img--bg {
-	  background-image: url('#{$image-path}logoyo.png');
-	  background-color: $color-base;
-	  background-repeat: no-repeat;
-	  @extend %imgbgsize-contain;
+		@include background-image(logoyo,contain,png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-color: $color-base;
 	}
 	// Mascaras
 	.img--mascara {

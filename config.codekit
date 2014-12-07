@@ -20,6 +20,72 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/assets\/img\/graficos.sketch\/QuickLook\/Preview.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 20793,
+		"inputAbbreviatedPath": "\/assets\/img\/graficos.sketch\/QuickLook\/Preview.png",
+		"outputAbbreviatedPath": "\/assets\/img\/graficos.sketch\/QuickLook\/Preview.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/graficos.sketch\/QuickLook\/Thumbnail.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 51078,
+		"inputAbbreviatedPath": "\/assets\/img\/graficos.sketch\/QuickLook\/Thumbnail.png",
+		"outputAbbreviatedPath": "\/assets\/img\/graficos.sketch\/QuickLook\/Thumbnail.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/logo.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8667,
+		"inputAbbreviatedPath": "\/assets\/img\/logo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/logo.sketch\/QuickLook\/Preview.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 6557,
+		"inputAbbreviatedPath": "\/assets\/img\/logo.sketch\/QuickLook\/Preview.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo.sketch\/QuickLook\/Preview.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/logo.sketch\/QuickLook\/Thumbnail.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 61329,
+		"inputAbbreviatedPath": "\/assets\/img\/logo.sketch\/QuickLook\/Thumbnail.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo.sketch\/QuickLook\/Thumbnail.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/logo@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 18924,
+		"inputAbbreviatedPath": "\/assets\/img\/logo@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/logo@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/logoyo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -67,6 +133,22 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/sass\/componentes\/_botones.scss",
 		"outputAbbreviatedPath": "\/assets\/sass\/css\/_botones.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"useLibsass": 0
+		},
+	"\/assets\/sass\/componentes\/_brand.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 0,
+		"decimalPrecision": 10,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/sass\/componentes\/_brand.scss",
+		"outputAbbreviatedPath": "\/assets\/sass\/css\/_brand.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -763,7 +845,7 @@
 		"useLibsass": 0
 		},
 	"\/assets\/sass\/main.scss": {
-		"createSourceMap": 0,
+		"createSourceMap": 1,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
@@ -832,6 +914,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/includes\/componentes\/brand.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/componentes\/brand.kit",
+		"outputAbbreviatedPath": "\/includes\/componentes\/brand.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/includes\/componentes\/galeria.kit": {
 		"fileType": 2048,
 		"ignore": 1,
@@ -859,21 +950,21 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/includes\/componentes\/modulo-post.kit": {
-		"fileType": 2048,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/includes\/componentes\/modulo-post.kit",
-		"outputAbbreviatedPath": "\/includes\/componentes\/modulo-post.html",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/includes\/componentes\/nav-main.kit": {
 		"fileType": 2048,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/componentes\/nav-main.kit",
 		"outputAbbreviatedPath": "\/includes\/componentes\/nav-main.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/componentes\/post.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/componentes\/post.kit",
+		"outputAbbreviatedPath": "\/includes\/componentes\/post.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
