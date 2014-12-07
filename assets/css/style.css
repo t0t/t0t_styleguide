@@ -509,33 +509,49 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-header__item, .idioma
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
+.wrapper > div:nth-of-type(1n), .wrapper > div:nth-of-type(3n), .main > div:nth-of-type(1n), .main > div:nth-of-type(3n), .header > div:nth-of-type(1n) {
+  width: calc(100% * 0.1666666667 - 6px * (1 - 0.1666666667));
+}
+
 header > div:nth-of-type(1n) {
   width: calc(100% * 0.25 - 6px * (1 - 0.25));
+}
+
+.main > div:nth-of-type(2n), .main > div:nth-of-type(4n), .footer > div:nth-of-type(1n), .footer > div:nth-of-type(2n), .footer > div:nth-of-type(3n) {
+  width: calc(100% * 0.3333333333 - 6px * (1 - 0.3333333333));
 }
 
 .col-6-6 > div:nth-of-type(1n), .col-6-6 > div:nth-of-type(2n) {
   width: calc(100% * 0.5 - 6px * (1 - 0.5));
 }
 
+.wrapper > div:nth-of-type(2n) {
+  width: calc(100% * 0.6666666667 - 6px * (1 - 0.6666666667));
+}
+
 header > div:nth-of-type(2n) {
   width: calc(100% * 0.75 - 6px * (1 - 0.75));
 }
 
-header, .col-6-6 {
+.header > div:nth-of-type(2n) {
+  width: calc(100% * 0.8333333333 - 6px * (1 - 0.8333333333));
+}
+
+header, .wrapper, .main, .footer, .header, .col-6-6 {
   overflow: hidden;
 }
 
-header > div, .col-6-6 > div {
+header > div, .wrapper > div, .main > div, .footer > div, .header > div, .col-6-6 > div {
   float: left;
   margin-right: 6px;
 }
 
-header > div:nth-of-type(2n), .col-6-6 > div:nth-of-type(2n) {
+header > div:nth-of-type(2n), .wrapper > div:nth-of-type(3n), .main > div:nth-of-type(4n), .footer > div:nth-of-type(3n), .header > div:nth-of-type(2n), .col-6-6 > div:nth-of-type(2n) {
   margin-right: 0;
 }
 
 @media (max-width: 48em) {
-  header > div, .col-6-6 > div {
+  header > div, .wrapper > div, .main > div, .footer > div, .header > div, .col-6-6 > div {
     width: 100% !important;
     float: none;
     margin-right: 0;
@@ -685,6 +701,54 @@ img {
 .img--mascara {
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.main {
+  padding-bottom: 0;
+}
+
+.footer,
+.header {
+  margin: 6px 0;
+}
+
+.sidebar, .aside {
+  min-height: calc(5em * 3 + 4 * 6px);
+}
+
+.block {
+  min-height: 5em;
+  margin-bottom: 6px;
+}
+
+.col {
+  min-height: 2em;
+}
+
+body {
+  padding: 0 6px;
+}
+
+.header,
+.footer {
+  background: #7f8c8d;
+}
+
+.sidebar,
+.aside {
+  background: #1abc9c;
+}
+
+.main {
+  background: #3498db;
+}
+
+.block {
+  background: #34495e;
+}
+
+.col {
+  background: #4e5758;
 }
 
 .color-base {
