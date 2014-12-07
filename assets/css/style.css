@@ -513,6 +513,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-header__item, .idioma
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
+.col-6-6 > div:nth-of-type(1n), .col-6-6 > div:nth-of-type(2n) {
+  width: calc(100% * 0.5 - 6px * (1 - 0.5));
+}
+
+.col-6-6 {
+  overflow: hidden;
+}
+
+.col-6-6 > div {
+  float: left;
+  margin-right: 6px;
+}
+
+.col-6-6 > div:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media (max-width: 48em) {
+  .col-6-6 > div {
+    width: 100% !important;
+    float: none;
+    margin-right: 0;
+  }
+}
 #offset {
   position: fixed;
   top: 0;
@@ -2463,16 +2487,16 @@ input:required:focus:valid {
 }
 @media all and (min-width: 600px) {
   .grid-form__item {
-    width: calc(25% - 3%);
+    width: calc(50% - 3%);
   }
 }
 @media all and (min-width: 1024px) {
   .grid-form__item {
-    width: calc(33.33% - 3%);
+    width: calc(50% - 3%);
   }
 }
 @media all and (min-width: 1280px) {
   .grid-form__item {
-    width: calc(25% - 3%);
+    width: calc(33.33% - 3%);
   }
 }
