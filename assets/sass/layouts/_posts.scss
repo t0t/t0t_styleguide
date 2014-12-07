@@ -1,13 +1,14 @@
 // Modulo Post
-.modulo-post {
+.article-post {
 	display: table;
+	@include max-width($bp3);
 }
-	.modulo-post__figure {
+	.article-post__figure {
 		width: 30%;
 		float: left;
 	}
 
-	.modulo-post__figure + p {
+	.article-post__figure + p {
 		font-family: $altfont;
 		font-weight: 700;
 	}

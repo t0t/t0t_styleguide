@@ -861,7 +861,7 @@
 		},
 	"\/includes\/componentes\/modulo-post.kit": {
 		"fileType": 2048,
-		"ignore": 1,
+		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/componentes\/modulo-post.kit",
 		"outputAbbreviatedPath": "\/includes\/componentes\/modulo-post.html",

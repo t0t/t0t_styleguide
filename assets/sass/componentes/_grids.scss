@@ -3,12 +3,7 @@
   padding: 0 $gutterwidth*2;
 }
 @media all and (min-width: $bp3) {
-  .grid {
-    @include flexbox;
-    @include flex-flow(row wrap);
-    @include justify-content(space-between);
-  }
-  .grid-form {
+  .grid, .grid-form {
     @include flexbox;
     @include flex-flow(row wrap);
     @include justify-content(space-between);
@@ -57,7 +52,8 @@
 }
 
 
-// Parteme el layout en dos columnas
+// Parteme el layout en dos columnas. 
+// HugoGiraudel es un crack!
 .col-6-6 {
   @include grid(6, 6);
 }

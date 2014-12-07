@@ -513,25 +513,33 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .nav-header__item, .idioma
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
+header > div:nth-of-type(1n) {
+  width: calc(100% * 0.25 - 6px * (1 - 0.25));
+}
+
 .col-6-6 > div:nth-of-type(1n), .col-6-6 > div:nth-of-type(2n) {
   width: calc(100% * 0.5 - 6px * (1 - 0.5));
 }
 
-.col-6-6 {
+header > div:nth-of-type(2n) {
+  width: calc(100% * 0.75 - 6px * (1 - 0.75));
+}
+
+header, .col-6-6 {
   overflow: hidden;
 }
 
-.col-6-6 > div {
+header > div, .col-6-6 > div {
   float: left;
   margin-right: 6px;
 }
 
-.col-6-6 > div:nth-of-type(2n) {
+header > div:nth-of-type(2n), .col-6-6 > div:nth-of-type(2n) {
   margin-right: 0;
 }
 
 @media (max-width: 48em) {
-  .col-6-6 > div {
+  header > div, .col-6-6 > div {
     width: 100% !important;
     float: none;
     margin-right: 0;
@@ -574,16 +582,20 @@ article, aside, figure, footer, header, hgroup, nav, section {
   box-sizing: border-box;
 }
 
-.modulo-post {
+.article-post {
   display: table;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  width: 100%;
 }
 
-.modulo-post__figure {
+.article-post__figure {
   width: 30%;
   float: left;
 }
 
-.modulo-post__figure + p {
+.article-post__figure + p {
   font-family: "Times New roman", serif;
   font-weight: 700;
 }
@@ -2425,26 +2437,7 @@ input:required:focus:valid {
 }
 
 @media all and (min-width: 600px) {
-  .grid {
-    display: -moz-flex;
-    /* OLD - Firefox 19 */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
-    display: -webkit-flex;
-    /* NEW - Chrome */
-    /* OLD - iOS 6-, Safari 3.1-6 */
-    display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    justify-content: space-between;
-  }
-
-  .grid-form {
+  .grid, .grid-form {
     display: -moz-flex;
     /* OLD - Firefox 19 */
     display: -ms-flexbox;
