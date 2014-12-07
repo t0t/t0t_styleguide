@@ -668,17 +668,17 @@ img {
 
 .img--bg {
   background-size: contain;
-  background-image: url(/assets/img/logoyo.png);
+  background-image: url(../img/logoyo.png);
   background-repeat: no-repeat;
   background-position: center;
   background-color: #cef0e3;
 }
 .no-svg .img--bg {
-  background-image: url(/assets/img/logoyo.png);
+  background-image: url(../img/logoyo.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .no-svg .img--bg {
-    background-image: url(assets/img/logoyo@2x.png);
+    background-image: url(../img/logoyo@2x.png);
   }
 }
 
@@ -2521,16 +2521,16 @@ a.brand__logo {
           flex: 1;
   min-height: 100px;
   background-size: contain;
-  background-image: url(/assets/img/logo.svg);
+  background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 .no-svg a.brand__logo {
-  background-image: url(/assets/img/logo.png);
+  background-image: url(../img/logo.png);
 }
 @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   .no-svg a.brand__logo {
-    background-image: url(assets/img/logo@2x.png);
+    background-image: url(../img/logo@2x.png);
   }
 }
 
