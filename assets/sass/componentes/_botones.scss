@@ -18,25 +18,18 @@
 	color : $textcolor;
 	text-align : center;
 	vertical-align : middle;
-	font-size: 100%;
 	letter-spacing: $baseletterspacing;
 	white-space:nowrap;
 	background-color : $color-base;
 	border : none;
-	// font-weight: bold;
 	cursor : pointer;
 	margin:0;
 	padding-top:   0;
    	padding-bottom:0;
    	padding-right:1em;
    	padding-left: 1em;
-	// border-radius: $radius;
+	border-radius: $radius;
 	@include transition(.4s);
-
-	/**
- 	* Nadie quiere un botón con texto subrayado cuando
- 	* hacemos hover.
- 	*/
 
 	&:hover {
 		text-decoration : none;
@@ -80,16 +73,16 @@ input[type="submit"].btn:hover {
 // Botón desplegable
 .btn--slidemenu {
 	@include square(50px);
-		border-radius 		: $radius;
-		color 			: rgba(0,0,0,0.3);
-		background-color 	: $color-base-invert;
+	border-radius 		: $radius;
+	color 				: rgba(0,0,0,0.3);
+	background-color 	: $color-base-invert;
 	
 	&:hover {
-		color 			: $color-base-invert;
+		color 				: $color-base-invert;
 		background-color	: $color-base;
 	}
 	&:visited {
-		color 			: $color-base;
+		color 				: $color-base;
 	}
 }
 
@@ -97,23 +90,23 @@ input[type="submit"].btn:hover {
 * Botones
 */
 .btn--slider {
-	background-color: $color-base;
-	color : $color-base-darken;
+	background-color 	: $color-base;
+	color 				: $color-base-darken;
 	&:hover {
-		color : lighten($color-info, 40%);
+		color 			: lighten($color-info, 40%);
 	}
 	&:visited {
-		color : $color-base-darken;
+		color 			: $color-base-darken;
 	}
 }
 .btn--info {
-	background-color: $color-info;
-	color : darken($color-info, 40%);
+	background-color 	: $color-info;
+	color 				: darken($color-info, 40%);
 	&:hover {
-		color : lighten($color-info, 40%);
+		color 			: lighten($color-info, 40%);
 	}
 	&:visited {
-		color : darken($color-info, 40%);
+		color 			: darken($color-info, 40%);
 	}
 }
 
@@ -131,7 +124,6 @@ input[type="submit"].btn:hover {
 /**
 * Botón principal
 */
-
 .btn--primary {
 	// @include font-size;
 	border: $borde;
@@ -150,7 +142,6 @@ input[type="submit"].btn:hover {
 /**
 * Botón de OK
 */
-
 .btn--success {
 	background-color: $color-success;
 	color : darken($color-success, 40%);
@@ -161,7 +152,6 @@ input[type="submit"].btn:hover {
 		color : darken($color-success, 40%);
 	}
 }
-
 
 
 /**
@@ -178,7 +168,6 @@ input[type="submit"].btn:hover {
 }
 
 
-
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,
@@ -186,7 +175,6 @@ input[type="submit"].btn:hover {
 	@include opacity(.5);
 	cursor : default;
  }
-
 
 
 /*------------------------------------*\
@@ -209,44 +197,4 @@ input[type="submit"].btn:hover {
     padding-right:3em;
     padding-left: 3em;
     line-height:4;
-}
-
-
-
-/*------------------------------------*\
-    $BOTONES-GRUPOS
-\*------------------------------------*/
-/**
- * Con esta clase podemos agrupar los botones
- * en grupos horizontales.
- *
- */
-.btn--group {
-	position : relative;
-	*margin-left : .3em;
-}
-
-.btn--group .btn {
-	position : relative;
-	border-radius: 0;
-	float : left;
-	margin-left : -1px;
-}
-
-.btn--group .btn:first-child {
-	margin-left : 0;
-	// @include border-radius(0, 0, $radius, $radius);
-}
-
-.btn--group .btn:last-child {
-	// @include border-radius($radius, $radius, 0, 0);
-}
-
-.btn--group .btn.large:first-child {
-	margin-left : 0;
-	// @include border-radius($radius, 0, $radius, 0);
-}
-
-.btn--group .btn.large:last-child {
-	// @include border-radius(0, $radius, 0, $radius);
 }

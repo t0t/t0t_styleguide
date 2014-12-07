@@ -1305,7 +1305,6 @@ a[target="_blank"]::after {
   color: black;
   text-align: center;
   vertical-align: middle;
-  font-size: 100%;
   letter-spacing: 1px;
   white-space: nowrap;
   background-color: #cef0e3;
@@ -1316,12 +1315,9 @@ a[target="_blank"]::after {
   padding-bottom: 0;
   padding-right: 1em;
   padding-left: 1em;
+  border-radius: 5px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  	/**
-   	* Nadie quiere un botón con texto subrayado cuando
-   	* hacemos hover.
-   	*/
 }
 .btn:hover {
   text-decoration: none;
@@ -1481,34 +1477,6 @@ input[type="submit"].btn:hover {
   padding-right: 3em;
   padding-left: 3em;
   line-height: 4;
-}
-
-/*------------------------------------*\
-    $BOTONES-GRUPOS
-\*------------------------------------*/
-/**
- * Con esta clase podemos agrupar los botones
- * en grupos horizontales.
- *
- */
-.btn--group {
-  position: relative;
-  *margin-left: .3em;
-}
-
-.btn--group .btn {
-  position: relative;
-  border-radius: 0;
-  float: left;
-  margin-left: -1px;
-}
-
-.btn--group .btn:first-child {
-  margin-left: 0;
-}
-
-.btn--group .btn.large:first-child {
-  margin-left: 0;
 }
 
 hr {
