@@ -10,7 +10,7 @@ body {
 	// @include background-image(bg,cover,jpg);
 }
 
-h1 {font-size: 10vw;}
+
 
 img {
   @include max-width($bp1);

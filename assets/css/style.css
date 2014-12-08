@@ -667,10 +667,6 @@ body {
   color: black;
 }
 
-h1 {
-  font-size: 10vw;
-}
-
 img {
   margin-left: auto;
   margin-right: auto;
@@ -1939,8 +1935,12 @@ Main navbar
 }
 
 .alert {
-  display: block;
-  margin: 1em;
+  display: table;
+  width: 100%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 2em;
   padding: 8px 35px 8px 14px;
   background-color: blue;
   border: 5px solid #000099;
@@ -1949,16 +1949,19 @@ Main navbar
   font-size: 0.7826086957rem;
   color: black;
 }
+.alert > p {
+  margin-bottom: 0;
+  display: table-cell;
+  width: 90%;
+}
 
 .alert--heading {
   color: inherit;
 }
 
 .close {
-  position: relative;
-  top: -2px;
-  right: -21px;
-  float: right;
+  display: table-cell;
+  width: 10%;
   font-size: 21px;
   font-size: 0.9130434783rem;
   font-weight: bold;

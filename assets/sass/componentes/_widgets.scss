@@ -22,29 +22,35 @@
 	.idiomas__item {}
 }
 
+
+
 // Alerts
 .alert {
-		display: block;
-		margin : $baselineheight/2;
-		padding : 8px 35px 8px 14px;
-		background-color : $color-alert;
-		border : $alertborderwidth $alertborderstyle $alertbordercolor;
-		font-family : $basefont;
-		@include font-size(18);
-		color: $alerttext;
-		// border-radius: $radius;
-		// @extend %full-width;
+	display: table;
+	width: 100%;
+	justify-content: center;
+	margin-bottom : $baselineheight;
+	padding : 8px 35px 8px 14px;
+	background-color : $color-alert;
+	border : $alertborderwidth $alertborderstyle $alertbordercolor;
+	font-family : $basefont;
+	@include font-size(18);
+	color: $alerttext;
+
+	> p {
+		margin-bottom: 0;
+		display: table-cell;
+		width: 90%;
 	}
+}
 
 	.alert--heading {
 		color : inherit;
 	}
 
 	.close {
-		position 		: relative;
-		top 			: -2px;
-		right 		: -21px;
-		float 		: right;
+		display: table-cell;
+		width: 10%;
 		@include font-size(21);
 		font-weight 	: bold;
 		line-height 	: 18px;
