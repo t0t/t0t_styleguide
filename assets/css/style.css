@@ -2562,4 +2562,40 @@ a.brand__logo {
   }
 }
 
+.shapes {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.shape-rounded {
+  border-radius: 10px;
+  width: 100px;
+  min-height: 50px;
+}
+
+.shape-mask {
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.shape-circle {
+  border-radius: 100%;
+  width: 100px;
+  min-height: 100px;
+}
+
+.shape-square {
+  width: 100px;
+  min-height: 100px;
+}
+
+.shape-custom {
+  width: 100px;
+  min-height: 50px;
+}
+
 /*# sourceMappingURL=style.css.map */
