@@ -5,6 +5,7 @@ html {
   }
 }
 body {
+	padding-top: $gutterwidth;
 	font-family: $basefont;
 	color: $textcolor;
 	// @include background-image(bg,cover,jpg);

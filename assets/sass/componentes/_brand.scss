@@ -1,5 +1,14 @@
 .brand {
 	display: flex;
+	flex-direction: column;
+	@media all and (min-width:$bp2) {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.brand__description {
+	padding: $gutterwidth;
 }
 
 a {
