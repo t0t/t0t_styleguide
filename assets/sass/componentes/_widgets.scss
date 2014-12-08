@@ -97,10 +97,18 @@
 // WELL ====================================================
 
 .well {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	@include max-width($bp2);
 	min-height : $paddingbase;
-	padding : ($paddingbase / 2) $paddingbase;
+	padding : $paddingbase $paddingbase;
 	border-radius: $radius;
 	margin-bottom : $baselineheight;
+	@extend %text-center;
 	background-color : $color-base-light;
 
 	p:last-child {
@@ -109,7 +117,7 @@
 }
 
 	.well--large {
-		padding : ($paddingbase * 2) ($paddingbase * 2);
+		padding : ($paddingbase * 4) ($paddingbase * 4);
 		@extend %text-center;
 		background-color: $color-base-invert;
 		border: none;
@@ -118,12 +126,16 @@
 	}
 
 	.well--small {
-		padding : 6px;
+		padding : $paddingbase / 2;
 	}
 
 	.well--panoramica {
+		@include max-width($bp1);
 		@include size(100%, 600px);
-		border-radius: none;
+		border-radius: 0;
+		p, h3 {
+			color: $white;
+		}
 	}
 
 
