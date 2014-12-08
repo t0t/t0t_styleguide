@@ -31,5 +31,9 @@
 			vertical-align: middle;
 		}
 	}
+}
 
+.footer {
+  @include grid(4, 4, 4);
+  background-color: $color-base-invert;
 }

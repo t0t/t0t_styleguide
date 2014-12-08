@@ -1,9 +1,9 @@
 
 
-// tamaños cajitas
+// tamaños cajas
 @mixin size($width, $height) {
   width: $width;
-  height: $height;
+  min-height: $height;
 }
 
 // cuadrados

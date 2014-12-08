@@ -42,6 +42,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/image.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 111387,
+		"inputAbbreviatedPath": "\/assets\/img\/image.jpg",
+		"outputAbbreviatedPath": "\/assets\/img\/image.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/logo.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -974,6 +985,15 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/includes\/componentes\/post.kit",
 		"outputAbbreviatedPath": "\/includes\/componentes\/post.html",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/includes\/componentes\/widgets.kit": {
+		"fileType": 2048,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/includes\/componentes\/widgets.kit",
+		"outputAbbreviatedPath": "\/includes\/componentes\/widgets.html",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},

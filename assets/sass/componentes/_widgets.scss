@@ -24,12 +24,10 @@
 
 // Alerts
 .alert {
-	display: none;
-	@media screen and (min-width: $bp3) {
 		display: block;
 		margin : $baselineheight/2;
 		padding : 8px 35px 8px 14px;
-		background-color : $color-base;
+		background-color : $color-alert;
 		border : $alertborderwidth $alertborderstyle $alertbordercolor;
 		font-family : $basefont;
 		@include font-size(18);
@@ -52,7 +50,6 @@
 		line-height 	: 18px;
 		color 		: inherit;
 	}
-}
 
 	.alert--success {
 		background-color 	: $alertsuccesscolor;
@@ -74,10 +71,8 @@
 
 	.alert--info {
 		@extend %text-center;
-		width: 196px;
 		padding: 6px 0;
 		line-height: 1;
-		float: right;
 		border: none;
 		background-color: $alertinfobg;
 		// border-color 	: $alertinfoborder;
@@ -91,39 +86,7 @@
 		color 			: $alertinversetext;
 	}
 
-// alert block
 
-	.alert--block {
-		display: none;
-		@extend %full-width;
-		@extend %text-right;
-		@media screen and (min-width: $bp3) {
-			padding: 0 $gutterwidth 0;
-			display: table;
-			@include max-width($bp1);
-			position: fixed;
-			top: 0;
-			right: 0;
-			left: 0;
-			.alert--heading {
-				margin-bottom : $baselineheight / 8;
-				font-size : inherit;
-				font-weight : bold;
-			}
-		}
-
-		> p,
-		> ul {
-			margin-bottom : 0;
-		}
-
-		p + p {
-			margin-top : 5px;
-		}
-	}
-
-
-// Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 
 // WELL ====================================================
 
@@ -142,7 +105,7 @@
 	.well--large {
 		padding : ($paddingbase * 2) ($paddingbase * 2);
 		@extend %text-center;
-		background-color: transparent;
+		background-color: $color-base-invert;
 		border: none;
 		border-radius: none;
 		box-shadow: none;
@@ -152,5 +115,9 @@
 		padding : 6px;
 	}
 
+	.well--panoramica {
+		@include size(100%, 600px);
+		border-radius: none;
+	}
 
 

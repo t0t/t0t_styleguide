@@ -92,16 +92,16 @@ $linkcolorhover 	: lighten($linkcolor, 10%);
 $linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: $linkcolorvisited;
 
-$color-alert 		: rgb(252,228,207);
-$color-error 		: rgb(218,79,73);
+$color-alert 		: blue;
+$color-error 		: red;
 $color-info 		: $color-base-invert;
 $color-inverse 	: invert($color-base);
-$color-success 	: rgb(91,183,91);
+$color-success 	: green;
 $color-warning 	: $color-error;
 
 // Texturas de popups
 $alertbordercolor	: darken($color-alert, 20%);
-$alertborderwidth 	: 2px;
+$alertborderwidth 	: 5px;
 $alertborderstyle 	: solid;
 $alerttext		: darken($color-alert, 60%);
 
@@ -114,7 +114,7 @@ $alerterrortext 	: $color-error;
 $alertinfocolor 	: lighten($color-info, 10%);
 $alertinfoborder  	: darken($color-info, 10%);
 $alertinfotext 	: $black;
-$alertinfobg 	: rgba(255,255,255,0.2);
+$alertinfobg 	: $color-info;
 
 // Inverso
 $alertinversecolor 	: $color-inverse;
